@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>稲石湧李 - Web Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar"></div>
+    </div>
+    
+    <!-- Header Navigation -->
+    <div class="header-nav">
+        <a href="#about" data-section="about">About</a>
+        <a href="#career" data-section="career">Career</a>
+        <a href="#skills" data-section="skills">Skills</a>
+        <a href="#projects" data-section="projects">Projects</a>
+        <a href="#timeline" data-section="timeline">Timeline</a>
+        <a href="#contact" data-section="contact">Contact</a>
+    </div>
+    
+    <!-- Floating Navigation -->
+    <div class="floating-nav">
+        <a href="#hero" class="nav-dot active" data-label="Hero"></a>
+        <a href="#about" class="nav-dot" data-label="About"></a>
+        <a href="#career" class="nav-dot" data-label="Career"></a>
+        <a href="#skills" class="nav-dot" data-label="Skills"></a>
+        <a href="#projects" class="nav-dot" data-label="Projects"></a>
+        <a href="#timeline" class="nav-dot" data-label="Timeline"></a>
+        <a href="#contact" class="nav-dot" data-label="Contact"></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <div class="profile-image">
+                湧李
+            </div>
+            <h1>稲石 湧李</h1>
+            <div class="age">26歳 (1999.2.28)</div>
+            <div class="role">Web Developer</div>
+            <div class="tagline">
+                設計思考×プログラミングで<br>
+                ユーザー体験を設計する
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            ↓ スクロールして詳細を見る
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">プラント設計から Web 開発への転身を目指しています</p>
+            </div>
+            <div class="about-content-wrapper">
+                <h3>プラント設計から Web 開発への転身</h3>
+                <p>プラント業界で約4年間、設計エンジニアとして複雑なシステムの設計・最適化に携わってきました。論理的思考力と問題解決能力を磨く中で、より多くの人に影響を与えられるWebの世界に魅力を感じ、転職を決意しました。</p>
+
+                <h3>現在の学習と今後の展望</h3>
+                <p>現在はHTML、CSS、JavaScriptを中心に学習を進めており、設計で培った「全体を俯瞰する視点」と「品質への責任感」を活かして、使いやすく美しいWebサイト制作を目指しています。継続的な学習と実践を通じて技術力を向上させながら、ユーザーに価値を提供できるWeb開発者として成長していきたいと考えています。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Section -->
+    <section id="career" class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Career</h2>
+                <p class="section-subtitle">プラント設計エンジニアとしての経験とスキル</p>
+            </div>
+            <div class="career-layout-final">
+                <div class="career-text-content-final">
+                    <div class="career-main">
+                        <h3 class="career-title">プラント設計エンジニア</h3>
+                        <div class="career-period">2021年4月 - 現在 (5年目)</div>
+                        <p class="career-description">化学プラントの配管・機器設計を担当。安全性と効率性を両立したシステム設計、複雑な要求仕様の分析、そして最適なソリューション提案に従事してきました。</p>
+                    </div>
+                    <div class="career-details">
+                        <h4 class="details-title">主な実績と習得スキル</h4>
+                        <ul class="details-list">
+                            <li>大規模プロジェクトでの配管設計主担当</li>
+                            <li>設計標準化による作業効率20%向上</li>
+                            <li>新人教育プログラムの策定と実施</li>
+                            <li>顧客折衝によるコスト削減提案</li>
+                            <li>複雑なシステムを俯瞰する設計思考</li>
+                            <li>厳格な品質基準への責任感</li>
+                            <li>部門横断的なプロジェクト推進力</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Skills</h2>
+                <p class="section-subtitle">現在のスキルと今後の学習予定</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>プラント設計スキル</h3>
+                    <ul class="skill-list">
+                        <li><span class="material-icons">settings</span> システム設計・解析</li>
+                        <li><span class="material-icons">assignment</span> プロジェクト管理</li>
+                        <li><span class="material-icons">verified</span> 品質管理・安全性評価</li>
+                        <li><span class="material-icons">description</span> 技術文書作成</li>
+                        <li><span class="material-icons">groups</span> チーム連携・顧客折衝</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h3>Web開発スキル</h3>
+                    <ul class="skill-list">
+                        <li><span class="material-icons">code</span> HTML5 / CSS3</li>
+                        <li><span class="material-icons">developer_mode</span> JavaScript (ES6+)</li>
+                        <li><span class="material-icons">devices</span> レスポンシブデザイン</li>
+                        <li><span class="material-icons">commit</span> Git / GitHub</li>
+                        <li><span class="material-icons">laptop_mac</span> VS Code</li>
+                    </ul>
+                </div>
+                
+                <div class="content-card">
+                    <h3>学習予定・興味分野</h3>
+                    <ul class="skill-list">
+                        <li><span class="material-icons">web</span> Vue.js / React</li>
+                        <li><span class="material-icons">cloud</span> Node.js</li>
+                        <li><span class="material-icons">storage</span> データベース (SQL)</li>
+                        <li><span class="material-icons">smart_toy</span> AI技術活用</li>
+                        <li><span class="material-icons">search</span> SEO最適化</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">学習を通じて制作した作品</p>
+            </div>
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3>ポートフォリオサイト</h3>
+                    <p>自己紹介とスキルアピールを目的とした、レスポンシブ対応のポートフォリオサイト。モダンなデザインと使いやすさを重視して制作。</p>
+                    <div class="project-details">
+                        <h4>工夫した点</h4>
+                        <ul>
+                            <li>後ほど記入</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="content-card">
+                    <h3>ホームページの模写</h3>
+                    <p>架空の企業サイトとして制作したランディングページ。コンバージョンを意識したデザインと、スムーズなアニメーションを実装。</p>
+                    <div class="project-details">
+                        <h4>工夫した点</h4>
+                        <ul>
+                            <li>後ほど記入</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML5</span>
+                        <span class="tech-tag">CSS3</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Timeline</h2>
+                <p class="section-subtitle">これまでの歩み</p>
+            </div>
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <!-- Timeline items in chronological order (oldest first) -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="images/timeline-birth.png" alt="誕生">
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">1999年2月28日</div>
+                            <h3>誕生</h3>
+                            <div class="timeline-organization">愛知県</div>
+                            <p>愛知県で生まれ、人生のスタートを切る</p>
+                            <div class="timeline-skills">
+                                <span class="skill-tag">人生の始まり</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="images/timeline-nursery.png" alt="保育園">
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">2002 - 2005</div>
+                            <h3>保育園</h3>
+                            <p>泣き虫小僧。母親にしがみつきながら入園。とてつもない嫌々気。砂遊びが大好きで自動保育中は外が真っ暗になっても気が付かず、夢中で砂のお城や泥団子を作り続ける。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="images/timeline-4thgrade.png" alt="小学４年生">
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">2005 - 2011</div>
+                            <h3>小学４年生</h3>
+                            <p>HIPHOPダンスに出会う。シャイな性格故、女の子が多い場所とあり肩身せまく隅っこで練習していたら中々上達せず。しかし負けず嫌いを発揮し辞めることなく自分にお喝を入れて通い続ける。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="images/timeline-juniorhigh.png" alt="中学生">
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">2011 - 2014</div>
+                            <h3>中学生</h3>
+                            <p>ソフトテニス部に入部。没頭癖を発揮し自ら早朝練を行うなど、勉強そっちのけで取り組む。大会では県大会に出場。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="images/timeline-juniorhigh2.png" alt="中学２年生">
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">2012 - 2013</div>
+                            <h3>中学２年生</h3>
+                            <p>親の勧めで塾に嫌々入学することに。入学試験で落ちるだろうと思っていたらまさかの通過。やってしまった。。。ダンスをやめて部活動も引退し勉強に専念することに。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            <img src="images/timeline-highschool.png" alt="高校生">
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">2014 - 2017</div>
+                            <h3>高校生</h3>
+                            <p>料理に目覚める。親の仕事の都合で、家族４人分の夕食を高校２年生までの約４年間作り続ける。決して苦痛ではなく、むしろ楽しく、めきめきと上達していった。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            画像
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">2017 - 2021</div>
+                            <h3>大学生</h3>
+                            <p>機械工学科に入学し、特に興味はないが機械材料について学ぶ。再びダンスに再会。ロボットダンスの魅力にのめり込む。</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            画像
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">2021 - 2023</div>
+                            <h3>社会人</h3>
+                            <p>プラントエンジニアとしてプラント業界に入社。CADを使いこなし、自分が設計したものが形になりプラント設備として世に放たれることの面白さに惹かれる。やる気に満ち溢れた１年目から３年目は同期に負けじと数々の案件をこなす。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-image">
+                            画像
+                        </div>
+                        <div class="timeline-text">
+                            <div class="timeline-period">2024 - 現在</div>
+                            <h3>社会人４年目</h3>
+                            <p>約３０００億円の大規模案件チームへ選抜される。毎日７時出社、22時帰宅の日々が約一年間続き、時には休日出勤もあり、心も体も疲弊していく。栄養満点手作り弁当だけを心の支えとして、なんとか命をつなぐ。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="content-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Contact</h2>
+                <p class="section-subtitle">お気軽にお問い合わせください</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-buttons-section">
+                    <a href="mailto:yuri.0228ex @gmail.com" class="contact-btn-section" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                        Email
+                    </a>
+                    <a href="https://github.com/yourusername" class="contact-btn-section" target="_blank">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        GitHub
+                    </a>
+                    <a href="tel:090-9921-4667" class="contact-btn-section">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                        </svg>
+                        Phone
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
