@@ -235,7 +235,7 @@
             bottom: 2rem;
             left: 50%;
             transform: translateX(-50%);
-            color: var(--primary-black);
+            color: white;
             font-size: 0.8rem;
             animation: bounce 2s infinite;
             cursor: pointer;
@@ -593,37 +593,27 @@
         /* Timeline specific styles */
         .timeline-container {
             position: relative;
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 2rem 0;
         }
 
         .timeline-line {
             position: absolute;
-            left: 30px;
+            left: 50%;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: var(--primary-black);
-            border-radius: 2px;
+            width: 0;
+            border-left: 3px dashed var(--light-gray);
         }
 
         .timeline-item {
+            padding: 1.5rem 0;
             position: relative;
-            margin-bottom: 2rem;
-            padding-bottom: 2rem;
-            border-bottom: 1px solid var(--very-light-gray);
+            width: 50%;
             opacity: 0;
             transform: translateY(50px);
-            transition: all 0.4s ease;
-        }
-
-        .timeline-item:hover {
-            border-bottom-color: var(--primary-black);
-        }
-
-        .timeline-item:last-child {
-            border-bottom: none;
+            transition: all 0.8s ease;
         }
 
         .timeline-item.animate {
@@ -631,10 +621,25 @@
             transform: translateY(0);
         }
 
+        /* Odd items on the right */
+        .timeline-item:nth-child(odd) {
+            left: 50%;
+            padding-left: 60px;
+        }
+
+        /* Even items on the left */
+        .timeline-item:nth-child(even) {
+            padding-right: 60px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            flex-direction: row-reverse;
+        }
+
         .timeline-marker {
             position: absolute;
-            left: 18px;
-            top: 8px;
+            top: 50%;
+            transform: translateY(-50%);
             width: 24px;
             height: 24px;
             border-radius: 50%;
@@ -642,63 +647,68 @@
             box-shadow: 0 0 0 3px var(--primary-black);
             z-index: 2;
             background: var(--background-gray);
-            transition: all 0.3s ease;
         }
 
-        .timeline-item:hover .timeline-marker {
-            transform: scale(1.1);
+        .timeline-item:nth-child(odd) .timeline-marker {
+            left: 0;
+            transform: translate(-50%, -50%);
+        }
+        .timeline-item:nth-child(even) .timeline-marker {
+            right: 0;
+            transform: translate(50%, -50%);
         }
 
         .timeline-content {
-            margin-left: 70px;
-            padding: 0.5rem 0;
-            transition: all 0.3s ease;
             display: flex;
-            gap: 1.5rem;
-            align-items: center; /* Vertically center align items */
+            gap: 2rem;
+            align-items: center;
+            position: relative;
         }
 
         .timeline-image {
             flex-shrink: 0;
-            width: 100px; /* Adjusted size */
-            height: 100px; /* Adjusted size */
-            border-radius: 50%; /* Circular shape */
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
             background: var(--background-gray);
             border: 2px solid var(--very-light-gray);
-            transition: all 0.3s ease;
-            overflow: hidden; /* Ensure image stays within the circle */
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .timeline-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* This makes the image cover the area, cropping as needed */
-        }
-
-        .timeline-item:hover .timeline-image {
-            border-color: var(--primary-black);
-            transform: scale(1.05);
+            object-fit: cover;
         }
 
         .timeline-text {
             flex: 1;
             min-width: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .timeline-item:nth-child(even) .timeline-text {
+            justify-content: flex-end;
+            text-align: right;
         }
 
         .timeline-period {
-            display: inline-block;
-            background: var(--primary-black);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 1rem;
+            margin-right: 1rem;
+        }
+
+        .timeline-organization,
+        .timeline-content p,
+        .timeline-skills {
+            flex-basis: 100%;
+            margin-top: 0.75rem;
         }
 
         .timeline-content h3 {
             color: var(--primary-black);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0;
             font-size: 1.4rem;
             font-weight: 600;
         }
@@ -706,21 +716,25 @@
         .timeline-organization {
             color: var(--medium-gray);
             font-size: 1rem;
-            margin-bottom: 1rem;
             font-weight: 500;
+            margin-bottom: 0;
         }
 
         .timeline-content p {
             color: var(--accent-gray);
             line-height: 1.7;
             font-size: 1rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 0;
         }
 
         .timeline-skills {
             display: flex;
             flex-wrap: wrap;
             gap: 0.5rem;
+        }
+
+        .timeline-item:nth-child(even) .timeline-skills {
+            justify-content: flex-end;
         }
 
         .skill-tag {
