@@ -116,6 +116,7 @@
                     <h3>プラント設計スキル</h3>
                     <ul class="skill-list">
                         <li><span class="material-icons">settings</span> システム設計・解析</li>
+                        <li><span class="material-icons">design_services</span> 2D/3D CAD</li>
                         <li><span class="material-icons">assignment</span> プロジェクト管理</li>
                         <li><span class="material-icons">verified</span> 品質管理・安全性評価</li>
                         <li><span class="material-icons">description</span> 技術文書作成</li>
@@ -153,43 +154,67 @@
         <div class="section-container">
             <div class="section-header">
                 <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">学習を通じて制作した作品</p>
+                <p class="section-subtitle">学習を通じて制作した作品（クリックで詳細表示）</p>
             </div>
-            <div class="content-grid">
-                <div class="content-card">
+            <div class="projects-grid">
+                <div class="project-card" data-modal-target="#project1">
                     <h3>ポートフォリオサイト</h3>
-                    <p>自己紹介とスキルアピールを目的とした、レスポンシブ対応のポートフォリオサイト。モダンなデザインと使いやすさを重視して制作。</p>
-                    <div class="project-details">
-                        <h4>工夫した点</h4>
-                        <ul>
-                            <li>後ほど記入</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
+                    <p>このポートフォリオサイトです。</p>
+                    <span class="project-card-cta">詳細を見る &rarr;</span>
                 </div>
-
-                <div class="content-card">
+                <div class="project-card" data-modal-target="#project2">
                     <h3>ホームページの模写</h3>
-                    <p>架空の企業サイトとして制作したランディングページ。コンバージョンを意識したデザインと、スムーズなアニメーションを実装。</p>
-                    <div class="project-details">
-                        <h4>工夫した点</h4>
-                        <ul>
-                            <li>後ほど記入</li>
-                        </ul>
-                    </div>
-                    <div class="project-tech">
-                        <span class="tech-tag">HTML5</span>
-                        <span class="tech-tag">CSS3</span>
-                        <span class="tech-tag">JavaScript</span>
-                    </div>
+                    <p>架空の企業サイトの模写です。</p>
+                    <span class="project-card-cta">詳細を見る &rarr;</span>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="project1">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img src="https://via.placeholder.com/1200x800.png?text=Portfolio+Site" alt="ポートフォリオサイトのスクリーンショット" class="modal-img">
+            <div class="modal-text">
+                <h2>ポートフォリオサイト</h2>
+                <p>自己紹介とスキルアピールを目的とした、レスポンシブ対応のポートフォリオサイト。モダンなデザインと使いやすさを重視して制作。</p>
+                <div class="project-details">
+                    <h4>工夫した点</h4>
+                    <ul>
+                        <li>後ほど記入</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="project2">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <img src="https://via.placeholder.com/1200x800.png?text=Website+Clone" alt="ホームページの模写のスクリーンショット" class="modal-img">
+            <div class="modal-text">
+                <h2>ホームページの模写</h2>
+                <p>架空の企業サイトとして制作したランディングページ。コンバージョンを意識したデザインと、スムーズなアニメーションを実装。</p>
+                <div class="project-details">
+                    <h4>工夫した点</h4>
+                    <ul>
+                        <li>後ほど記入</li>
+                    </ul>
+                </div>
+                <div class="project-tech">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Timeline Section -->
     <section id="timeline" class="content-section">

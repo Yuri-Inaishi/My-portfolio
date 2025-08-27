@@ -811,7 +811,7 @@
             content: '';
             position: absolute;
             top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('images/career-illustration.png');
+            background-image: url('images/ChatGPT Image 2025年8月28日 06_20_13.png');
             background-size: cover;
             background-position: center;
             z-index: -1;
@@ -983,3 +983,231 @@
             background: inherit;
             will-change: transform;
         }
+
+        .parallax-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Final Career Section Adjustments */
+        .career-layout-final {
+            align-items: center; /* Center vertically */
+            justify-content: flex-start; /* Align text to the left */
+        }
+
+        .career-text-content-final {
+            max-width: 50%; /* Adjust width */
+        }
+
+        @media (max-width: 992px) {
+            .career-text-content-final {
+                max-width: 70%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .career-layout-final {
+                padding: 2rem;
+                min-height: 500px;
+                align-items: flex-end; /* Position text at the bottom */
+            }
+
+            .career-text-content-final {
+                max-width: 100%;
+                padding: 1.5rem;
+            }
+        }
+
+        /* Final Timeline Adjustments */
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 12px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                left: 0;
+                padding-left: 40px;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(even) {
+                padding-left: 40px;
+                padding-right: 0;
+            }
+
+            .timeline-item:nth-child(even) .timeline-content {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .timeline-item:nth-child(even) .timeline-text {
+                justify-content: flex-start;
+                text-align: left;
+            }
+
+            .timeline-item:nth-child(even) .timeline-skills {
+                justify-content: flex-start;
+            }
+
+            .timeline-marker {
+                left: 0;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        /* Final Skills Section Adjustments */
+        @media (max-width: 992px) {
+            #skills .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+/* Projects Grid & Cards */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    border: 1px solid var(--very-light-gray);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.project-card h3 {
+    color: var(--primary-black);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.project-card p {
+    color: var(--accent-gray);
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-card-cta {
+    font-weight: 600;
+    color: var(--primary-black);
+    transition: color 0.3s ease;
+}
+
+.project-card:hover .project-card-cta {
+    color: var(--medium-gray);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    display: flex;
+    gap: 2rem;
+    transform: scale(0.95);
+    transition: transform 0.4s ease;
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--light-gray);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+    color: var(--primary-black);
+}
+
+.modal-img {
+    flex: 1.5;
+    max-width: 60%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.modal-text {
+    flex: 1;
+}
+
+@media (max-width: 992px) {
+    .modal-content {
+        flex-direction: column;
+    }
+    .modal-img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
