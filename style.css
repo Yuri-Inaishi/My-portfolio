@@ -172,7 +172,7 @@
             font-size: 3rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
-            color: var(--primary-black);
+            color: white;
         }
 
         .hero-content .age {
@@ -183,14 +183,14 @@
             font-size: 0.9rem;
             margin-bottom: 1rem;
             backdrop-filter: blur(10px);
-            color: var(--primary-black);
+            color: white;
         }
 
         .hero-content .role {
             font-size: 1.2rem;
             margin-bottom: 1.5rem;
             opacity: 0.9;
-            color: var(--primary-black);
+            color: white;
         }
 
         .hero-content .tagline {
@@ -199,7 +199,7 @@
             line-height: 1.6;
             max-width: 300px;
             margin: 0 auto 2rem auto;
-            color: var(--primary-black);
+            color: white;
         }
 
         .contact-buttons {
