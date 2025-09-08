@@ -381,7 +381,7 @@
             max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-            padding: 4rem 80px;
+            padding: 4rem 120px; /* Increased horizontal padding */
         }
 
         .section-header {
@@ -801,36 +801,19 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Career Section - Final Layout */
+        /* Career Section - Layout */
         .career-layout-final {
-            position: relative;
             width: 100%;
-            min-height: 600px;
             margin-top: 2rem;
-            border-radius: 16px;
-            overflow: hidden; /* To contain the background */
-            display: flex;
-            align-items: flex-start; /* Position text at the top */
-            padding: 3rem;
-        }
-
-        .career-layout-final::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background-image: url('images/ChatGPT Image 2025年8月28日 06_20_13.png');
-            background-size: cover;
-            background-position: center;
-            z-index: -1;
-        }
-
-        .career-text-content-final {
-            max-width: 60%;
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(2px);
-            -webkit-backdrop-filter: blur(2px);
-            padding: 2.5rem;
-            border-radius: 12px;
+            display: flex; /* Use flexbox to center content */
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+            min-height: 500px; /* Ensure enough space for background image */
+            background-image: url('images/ChatGPT Image 2025年9月6日 07_35_17.png');
+            background-size: 50% auto; /* Make it even smaller */
+            background-position: 75% 75%; /* Move image straight down */
+            background-repeat: no-repeat;
+            padding: 3rem; /* Add some padding around the content */
         }
 
         /* Text colors for the new panel */
@@ -874,14 +857,7 @@
         }
 
         @media (max-width: 768px) {
-            .career-layout-split {
-                flex-direction: column; /* Stack them */
-                align-items: center; /* Center them when stacked */
-            }
-            .career-illustration-container {
-                order: -1; /* Move image to the top on mobile */
-                margin-bottom: 2rem;
-            }
+            
             .timeline-line {
                 left: 20px;
             }
@@ -1020,7 +996,9 @@
         }
 
         .career-text-content-final {
-            max-width: 50%; /* Adjust width */
+            padding: 2.5rem; /* Keep general padding */
+            transform: translateY(-110px) translateX(90px); /* Move text up and even further right */
+            max-width: 800px; /* Make text block even wider */
         }
 
         @media (max-width: 992px) {
@@ -1029,18 +1007,7 @@
             }
         }
 
-        @media (max-width: 768px) {
-            .career-layout-final {
-                padding: 2rem;
-                min-height: 500px;
-                align-items: flex-end; /* Position text at the bottom */
-            }
-
-            .career-text-content-final {
-                max-width: 100%;
-                padding: 1.5rem;
-            }
-        }
+        
 
         /* Final Timeline Adjustments */
         @media (max-width: 768px) {
