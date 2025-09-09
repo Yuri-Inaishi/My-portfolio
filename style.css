@@ -434,9 +434,7 @@
             justify-content: center;
         }
 
-        #skills .content-grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
+        
 
         .content-card {
             background: white;
@@ -543,6 +541,7 @@
             display: flex;
             align-items: center;
             gap: 0.75rem;
+            letter-spacing: 0.05em;
         }
 
         .skill-list li .material-icons {
@@ -826,6 +825,7 @@
         .career-text-content-final .career-description,
         .career-text-content-final .details-list li {
             color: var(--accent-gray);
+            letter-spacing: 0.05em;
         }
 
         .career-text-content-final .career-period {
@@ -997,7 +997,7 @@
 
         .career-text-content-final {
             padding: 2.5rem; /* Keep general padding */
-            transform: translateY(-110px) translateX(90px); /* Move text up and even further right */
+            transform: translateY(-170px) translateX(90px); /* Move text up and even further right */
             max-width: 800px; /* Make text block even wider */
         }
 

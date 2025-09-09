@@ -45,7 +45,7 @@
                     setTimeout(() => header.classList.add('animate'), 200);
                 }
 
-                const cards = section.querySelectorAll('.content-card, .timeline-item');
+                const cards = section.querySelectorAll('.content-card');
                 cards.forEach((card, index) => {
                     setTimeout(() => {
                         card.classList.add('animate');
@@ -129,6 +129,20 @@
             document.querySelectorAll('section').forEach(section => {
                 sectionObserver.observe(section);
                 navObserver.observe(section);
+            });
+
+            // Timeline item observer for individual animation
+            const timelineItemObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                        timelineItemObserver.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                timelineItemObserver.observe(item);
             });
 
             // Add scroll event listener (passive for performance)
