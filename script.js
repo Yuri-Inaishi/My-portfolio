@@ -33,7 +33,7 @@
                     if (headerNavLink) headerNavLink.classList.add('active');
                 }
             });
-        }, { threshold: 0.5 });
+        }, { threshold: 0.15 });
 
         // Animate section function
         function animateSection(section) {
@@ -62,7 +62,8 @@
             document.querySelector('.progress-bar').style.width = scrollPercent + '%';
         }
 
-        // Parallax effect for hero section
+        // Parallax effect for hero section (Disabled for performance testing)
+        /*
         function updateParallax() {
             const scrollY = window.pageYOffset;
             const heroSection = document.querySelector('.hero-section');
@@ -70,6 +71,7 @@
                 heroSection.style.transform = `translateY(${scrollY * 0.5}px)`;
             }
         }
+        */
 
         // Particle system
         function createParticle() {
@@ -91,7 +93,7 @@
             if (!ticking) {
                 requestAnimationFrame(() => {
                     updateProgressBar();
-                    updateParallax();
+                    // updateParallax(); // Disabled for performance testing
                     ticking = false;
                 });
                 ticking = true;
@@ -228,3 +230,11 @@
             sectionObserver.disconnect();
             navObserver.disconnect();
         });
+
+// Hero background image loading
+window.addEventListener('load', () => {
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+        heroSection.classList.add('hero-loaded');
+    }
+});
