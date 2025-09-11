@@ -399,7 +399,7 @@
             opacity: 1;
         }
 
-        .content-section:nth-child(even) {
+        section.content-section:nth-of-type(even) {
             background: var(--background-gray);
         }
 
@@ -831,14 +831,26 @@
             width: 100%;
             margin-top: 2rem;
             display: flex; /* Use flexbox to center content */
-            justify-content: center; /* Center horizontally */
+            justify-content: flex-start; /* Align text to the left */
             align-items: center; /* Center vertically */
-            min-height: 500px; /* Ensure enough space for background image */
-            background-image: url('images/ChatGPT Image 2025年9月6日 07_35_17.png');
-            background-size: 50% auto; /* Make it even smaller */
-            background-position: 75% 75%; /* Move image straight down */
-            background-repeat: no-repeat;
+            min-height: 500px; /* Ensure enough space for content */
             padding: 3rem; /* Add some padding around the content */
+            position: relative; /* For pseudo-element positioning */
+        }
+
+        .career-layout-final::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 3rem; /* Adjust as needed */
+            transform: translateY(-50%);
+            width: 50%; /* Match original background-size */
+            height: 100%; /* Adjust as needed */
+            background-image: url('images/ChatGPT Image 2025年9月6日 07_35_17.png');
+            background-size: contain; /* Ensure image fits */
+            background-repeat: no-repeat;
+            background-position: center;
+            z-index: 0; /* Behind text */
         }
 
         /* Text colors for the new panel */
@@ -883,42 +895,6 @@
         }
 
         @media (max-width: 768px) {
-            
-            .timeline-line {
-                left: 20px;
-            }
-
-            .timeline-marker {
-                left: 12px;
-                width: 16px;
-                height: 16px;
-            }
-
-            .timeline-content {
-                margin-left: 50px;
-                padding: 1.5rem;
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            .timeline-image {
-                width: 100px;
-                height: 100px;
-                align-self: center;
-            }
-
-            .timeline-content h3 {
-                font-size: 1.2rem;
-            }
-
-            .timeline-skills {
-                gap: 0.3rem;
-            }
-
-            .skill-tag {
-                font-size: 0.75rem;
-                padding: 0.25rem 0.6rem;
-            }
 
             .hero-content h1 {
                 font-size: 2.5rem;
@@ -961,6 +937,39 @@
 
             .content-card {
                 padding: 1.5rem;
+            }
+
+            /* Career Section Mobile Layout */
+            .career-layout-final {
+                display: flex; /* Use flexbox for stacking */
+                flex-direction: column; /* Stack text and image */
+                align-items: center; /* Center content horizontally */
+                min-height: auto;
+                padding: 1rem; /* Adjust padding */
+            }
+
+            .career-layout-final::after {
+                display: none; /* Hide desktop pseudo-element image on mobile */
+            }
+
+            .career-text-content-final {
+                transform: none; /* Reset the desktop transform */
+                max-width: 100%;
+                padding: 1rem;
+                margin-top: 0; /* Reset margin-top */
+                order: 1; /* Place text first */
+            }
+            
+            .career-main .career-description, .career-details .details-list {
+                line-height: 1.7; /* Ensure text is readable */
+            }
+
+            .career-mobile-img {
+                display: block; /* Show mobile image */
+                max-width: 90%; /* Adjust size as needed */
+                height: auto;
+                margin: 1rem auto 2rem auto; /* Center and add spacing */
+                order: 2; /* Place image second */
             }
         }
 
@@ -1033,43 +1042,109 @@
             }
         }
 
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
+        /* Hide mobile image on desktop */
+        .career-mobile-img {
+            display: none;
+        }
+
         
 
-        /* Final Timeline Adjustments */
+        /* Timeline Mobile Layout */
         @media (max-width: 768px) {
             .timeline-line {
-                left: 12px;
+                left: 20px; /* A bit more space from the edge */
             }
 
-            .timeline-item {
+            .timeline-item,
+            .timeline-item:nth-child(even) {
                 width: 100%;
                 left: 0;
-                padding-left: 40px;
-                padding-right: 0;
+                padding-left: 50px; /* Consistent padding for all items */
+                padding-right: 15px; /* Add some padding on the right */
+            }
+            
+            /* Ensure odd items are also reset */
+            .timeline-item:nth-child(odd) {
+                left: 0;
             }
 
-            .timeline-item:nth-child(even) {
-                padding-left: 40px;
-                padding-right: 0;
+            .timeline-content {
+                padding: 1rem 0; /* Adjust padding */
             }
 
-            .timeline-item:nth-child(even) .timeline-content {
-                flex-direction: column;
-                align-items: flex-start;
+            .timeline-item:nth-child(even) .timeline-content,
+            .timeline-item:nth-child(odd) .timeline-content {
+                flex-direction: column; /* Force column layout for all */
+                align-items: flex-start; /* Align all content to the left */
             }
-
-            .timeline-item:nth-child(even) .timeline-text {
+            
+            .timeline-item:nth-child(even) .timeline-text,
+            .timeline-item:nth-child(odd) .timeline-text {
                 justify-content: flex-start;
                 text-align: left;
             }
 
-            .timeline-item:nth-child(even) .timeline-skills {
+            .timeline-item:nth-child(even) .timeline-skills,
+            .timeline-item:nth-child(odd) .timeline-skills {
                 justify-content: flex-start;
             }
 
-            .timeline-marker {
-                left: 0;
+            /* Corrected marker alignment */
+            .timeline-item:nth-child(odd) .timeline-marker,
+            .timeline-item:nth-child(even) .timeline-marker {
+                left: 20px;
+                right: auto; /* Reset right property */
                 transform: translate(-50%, -50%);
+            }
+
+            .timeline-image {
+                width: 100px; /* Adjust size */
+                height: 100px;
+                align-self: flex-start; /* Align image to the left */
+            }
+
+            .timeline-content h3 {
+                font-size: 1.2rem;
             }
         }
 
@@ -1195,6 +1270,74 @@
 
 .modal-text {
     flex: 1;
+}
+
+/* Image Carousel in Modal */
+.modal-img-container {
+    flex: 1.5;
+    max-width: 60%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.carousel-img.active {
+    opacity: 1;
+    position: relative; /* Gives the container its intrinsic size */
+}
+
+.modal-img-prev, .modal-img-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 1rem 0.75rem;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease, background 0.3s ease;
+}
+
+.modal-img-container:hover .modal-img-prev,
+.modal-img-container:hover .modal-img-next {
+    opacity: 1;
+}
+
+.modal-img-prev:hover, .modal-img-next:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-img-prev {
+    left: 0;
+    border-radius: 0 8px 8px 0;
+}
+
+.modal-img-next {
+    right: 0;
+    border-radius: 8px 0 0 8px;
+}
+
+/* Adjustments for carousel within modal layout */
+@media (max-width: 992px) {
+    .modal-img-container {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 992px) {

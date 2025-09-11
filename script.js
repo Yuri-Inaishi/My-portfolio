@@ -182,6 +182,8 @@
                 heroSection.classList.add('animate');
             }
 
+            
+
             // Modal functionality
             const openModalButtons = document.querySelectorAll('[data-modal-target]');
             const closeModalButtons = document.querySelectorAll('.modal-close');
@@ -218,6 +220,41 @@
                 if (modal == null) return;
                 modal.classList.remove('active');
             }
+
+            // Image carousel for modals
+            document.querySelectorAll('.modal-img-container').forEach(container => {
+                const prevButton = container.querySelector('.modal-img-prev');
+                const nextButton = container.querySelector('.modal-img-next');
+                const images = Array.from(container.querySelectorAll('.carousel-img'));
+                let currentIndex = 0;
+
+                function updateImages() {
+                    if (images.length === 0) return;
+                    images.forEach((img, index) => {
+                        img.classList.toggle('active', index === currentIndex);
+                    });
+                }
+
+                if (prevButton && nextButton && images.length > 1) {
+                    const initialActiveIndex = images.findIndex(img => img.classList.contains('active'));
+                    if (initialActiveIndex !== -1) {
+                        currentIndex = initialActiveIndex;
+                    }
+                    updateImages(); // Call initially to set the correct image
+
+                    prevButton.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        currentIndex = (currentIndex - 1 + images.length) % images.length;
+                        updateImages();
+                    });
+
+                    nextButton.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        currentIndex = (currentIndex + 1) % images.length;
+                        updateImages();
+                    });
+                }
+            });
         });
 
         // Handle reduced motion preference
@@ -230,6 +267,10 @@
             sectionObserver.disconnect();
             navObserver.disconnect();
         });
+
+        
+
+        
 
 // Hero background image loading
 window.addEventListener('load', () => {
