@@ -841,7 +841,7 @@
         .career-layout-final::after {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 60%;
             right: 3rem; /* Adjust as needed */
             transform: translateY(-50%);
             width: 50%; /* Match original background-size */
@@ -946,6 +946,7 @@
                 align-items: center; /* Center content horizontally */
                 min-height: auto;
                 padding: 1rem; /* Adjust padding */
+                margin-top: 6rem; /* Add space above */
             }
 
             .career-layout-final::after {
@@ -955,9 +956,14 @@
             .career-text-content-final {
                 transform: none; /* Reset the desktop transform */
                 max-width: 100%;
-                padding: 1rem;
+                padding: 1rem 1rem 0 1rem;
                 margin-top: 0; /* Reset margin-top */
                 order: 1; /* Place text first */
+                margin-bottom: -6rem; /* Pull the image up */
+            }
+
+            .career-details .details-list {
+                margin-bottom: 0;
             }
             
             .career-main .career-description, .career-details .details-list {
@@ -965,10 +971,10 @@
             }
 
             .career-mobile-img {
-                display: block; /* Show mobile image */
+                display: block !important; /* Show mobile image (forced) */
                 max-width: 90%; /* Adjust size as needed */
                 height: auto;
-                margin: 1rem auto 2rem auto; /* Center and add spacing */
+                margin: 0 auto 2rem auto; /* Center and add spacing */
                 order: 2; /* Place image second */
             }
         }
@@ -1032,7 +1038,7 @@
 
         .career-text-content-final {
             padding: 2.5rem; /* Keep general padding */
-            transform: translateY(-170px) translateX(90px); /* Move text up and even further right */
+            transform: translateY(-100px);
             max-width: 800px; /* Make text block even wider */
         }
 
@@ -1040,46 +1046,6 @@
             .career-text-content-final {
                 max-width: 70%;
             }
-        }
-
-        /* Hide mobile image on desktop */
-        .career-mobile-img {
-            display: none;
-        }
-
-        /* Hide mobile image on desktop */
-        .career-mobile-img {
-            display: none;
-        }
-
-        /* Hide mobile image on desktop */
-        .career-mobile-img {
-            display: none;
-        }
-
-        /* Hide mobile image on desktop */
-        .career-mobile-img {
-            display: none;
-        }
-
-        /* Hide mobile image on desktop */
-        .career-mobile-img {
-            display: none;
-        }
-
-        /* Hide mobile image on desktop */
-        .career-mobile-img {
-            display: none;
-        }
-
-        /* Hide mobile image on desktop */
-        .career-mobile-img {
-            display: none;
-        }
-
-        /* Hide mobile image on desktop */
-        .career-mobile-img {
-            display: none;
         }
 
         /* Hide mobile image on desktop */
@@ -1284,7 +1250,7 @@
 .carousel-img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
     opacity: 0;
     position: absolute;
@@ -1352,5 +1318,15 @@
 @media (max-width: 768px) {
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Sticky modal close button for mobile/tablet */
+@media (max-width: 992px) {
+    .modal-close {
+        position: sticky;
+        top: 1rem;
+        z-index: 10;
+        margin-left: auto;
     }
 }
