@@ -34,7 +34,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Progress Bar */
+        /* プログレスバー */
         .progress-container {
             position: fixed;
             top: 0;
@@ -52,7 +52,7 @@
             transition: width 0.3s ease;
         }
 
-        /* Background Animation */
+        /* 背景アニメーション */
         .bg-animation {
             position: fixed;
             top: 0;
@@ -82,7 +82,7 @@
             100% { opacity: 0.8; }
         }
 
-        /* Particle System */
+        /* パーティクルシステム */
         .particle {
             position: fixed;
             width: 3px;
@@ -111,7 +111,7 @@
             }
         }
 
-        /* Hero Section */
+        /* ヒーローセクション */
         .hero-section {
             min-height: 100vh;
             background-color: var(--light-gray);
@@ -239,20 +239,20 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(255, 255, 255, 0.2); /* Light background */
-            color: var(--primary-black); /* Dark text */
+            background: rgba(255, 255, 255, 0.2); /* 明るい背景 */
+            color: var(--primary-black); /* 暗いテキスト */
             text-decoration: none;
             padding: 0.75rem 1.5rem;
             border-radius: 8px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(45, 45, 45, 0.1); /* Lighter border */
+            border: 1px solid rgba(45, 45, 45, 0.1); /* 明るいボーダー */
             transition: all 0.3s ease;
             font-weight: 500;
         }
 
         .contact-btn:hover {
-            background: rgba(255, 255, 255, 0.4); /* Lighter background on hover */
-            transform: translateY(-3px) scale(1.05); /* More pronounced hover effect */
+            background: rgba(255, 255, 255, 0.4); /* ホバー時にさらに明るい背景 */
+            transform: translateY(-3px) scale(1.05); /* より顕著なホバー効果 */
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
         }
 
@@ -279,7 +279,7 @@
             }
         }
 
-        /* Header Navigation */
+        /* ヘッダーナビゲーション */
         .header-nav {
             position: fixed;
             top: 2rem;
@@ -321,7 +321,7 @@
             border-radius: 1px;
         }
 
-        /* Floating Navigation */
+        /* フローティングナビゲーション */
         .floating-nav {
             position: fixed;
             top: 50%;
@@ -381,7 +381,7 @@
             right: 25px;
         }
 
-        /* Content Sections */
+        /* コンテンツセクション */
         .content-section {
             min-height: 100vh;
             background: white;
@@ -452,7 +452,7 @@
             line-height: 1.6;
         }
 
-        /* Content Grid */
+        /* コンテンツグリッド */
         .content-grid {
             display: grid;
             gap: 2rem;
@@ -500,12 +500,12 @@
             font-size: 1rem;
         }
 
-        /* About Content Wrapper */
+        /* Aboutセクションのコンテンツラッパー */
         .about-content-wrapper {
-            max-width: 800px; /* Adjust as needed */
+            max-width: 800px; /* 必要に応じて調整 */
             margin: 0 auto;
-            padding: 0 20px; /* Add some padding */
-            text-align: left; /* Align text to left */
+            padding: 0 20px; /* パディングを追加 */
+            text-align: left; /* テキストを左揃えに */
         }
 
         .about-content-wrapper h3 {
@@ -521,7 +521,7 @@
             color: var(--accent-gray);
         }
 
-        /* Career specific styles */
+        /* Careerセクション固有のスタイル */
         .career-period {
             display: inline-block;
             background: var(--primary-black);
@@ -555,7 +555,7 @@
             font-size: 1.1rem;
         }
 
-        /* Skills specific styles */
+        /* Skillsセクション固有のスタイル */
         .skill-list {
             list-style: none;
         }
@@ -574,7 +574,7 @@
             color: var(--primary-black);
         }
 
-        /* Projects specific styles */
+        /* Projectsセクション固有のスタイル */
         .project-details {
             margin-top: 1.5rem;
         }
@@ -615,7 +615,7 @@
             font-weight: 500;
         }
 
-        /* Timeline specific styles */
+        /* Timelineセクション固有のスタイル */
         .timeline-container {
             position: relative;
             max-width: 1000px;
@@ -646,13 +646,13 @@
             transform: translateY(0);
         }
 
-        /* Odd items on the right */
+        /* 奇数番目のアイテムを右側に */
         .timeline-item:nth-child(odd) {
             left: 50%;
             padding-left: 60px;
         }
 
-        /* Even items on the left */
+        /* 偶数番目のアイテムを左側に */
         .timeline-item:nth-child(even) {
             padding-right: 60px;
         }
@@ -779,7 +779,7 @@
             border: 1px solid var(--very-light-gray);
         }
 
-        /* Contact specific styles */
+        /* Contactセクション固有のスタイル */
         .contact-content {
             text-align: center;
             max-width: 600px;
@@ -826,34 +826,34 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* Career Section - Layout */
+        /* Careerセクション - レイアウト */
         .career-layout-final {
             width: 100%;
             margin-top: 2rem;
-            display: flex; /* Use flexbox to center content */
-            justify-content: flex-start; /* Align text to the left */
-            align-items: center; /* Center vertically */
-            min-height: 500px; /* Ensure enough space for content */
-            padding: 3rem; /* Add some padding around the content */
-            position: relative; /* For pseudo-element positioning */
+            display: flex; /* flexboxでコンテンツを中央揃え */
+            justify-content: flex-start; /* テキストを左揃えに */
+            align-items: center; /* 垂直方向に中央揃え */
+            min-height: 500px; /* コンテンツに十分なスペースを確保 */
+            padding: 3rem; /* コンテンツの周りにパディングを追加 */
+            position: relative; /* 疑似要素の位置指定のため */
         }
 
         .career-layout-final::after {
             content: '';
             position: absolute;
             top: 60%;
-            right: 3rem; /* Adjust as needed */
+            right: 3rem; /* 必要に応じて調整 */
             transform: translateY(-50%);
-            width: 50%; /* Match original background-size */
-            height: 100%; /* Adjust as needed */
+            width: 50%; /* 元のbackground-sizeに合わせる */
+            height: 100%; /* 必要に応じて調整 */
             background-image: url('images/ChatGPT Image 2025年9月6日 07_35_17.png');
-            background-size: contain; /* Ensure image fits */
+            background-size: contain; /* 画像が収まるようにする */
             background-repeat: no-repeat;
             background-position: center;
-            z-index: 0; /* Behind text */
+            z-index: 0; /* テキストの背面に */
         }
 
-        /* Text colors for the new panel */
+        /* 新しいパネルのテキスト色 */
         .career-text-content-final .career-title,
         .career-text-content-final .details-title {
             color: var(--primary-black);
@@ -875,7 +875,7 @@
             color: var(--primary-black);
         }
 
-        /* Responsive Design */
+        /* レスポンシブデザイン */
         @media (max-width: 1199px) {
             .hero-content {
                 padding: 2rem 40px;
@@ -939,27 +939,27 @@
                 padding: 1.5rem;
             }
 
-            /* Career Section Mobile Layout */
+            /* Careerセクション モバイルレイアウト */
             .career-layout-final {
-                display: flex; /* Use flexbox for stacking */
-                flex-direction: column; /* Stack text and image */
-                align-items: center; /* Center content horizontally */
+                display: flex; /* flexboxで要素を重ねる */
+                flex-direction: column; /* テキストと画像を重ねる */
+                align-items: center; /* コンテンツを水平方向に中央揃え */
                 min-height: auto;
-                padding: 1rem; /* Adjust padding */
-                margin-top: 6rem; /* Add space above */
+                padding: 1rem; /* パディングを調整 */
+                margin-top: 6rem; /* 上部にスペースを追加 */
             }
 
             .career-layout-final::after {
-                display: none; /* Hide desktop pseudo-element image on mobile */
+                display: none; /* モバイルではデスクトップ用の疑似要素画像を非表示に */
             }
 
             .career-text-content-final {
-                transform: none; /* Reset the desktop transform */
+                transform: none; /* デスクトップ用のtransformをリセット */
                 max-width: 100%;
                 padding: 1rem 1rem 0 1rem;
-                margin-top: 0; /* Reset margin-top */
-                order: 1; /* Place text first */
-                margin-bottom: -6rem; /* Pull the image up */
+                margin-top: 0; /* margin-topをリセット */
+                order: 1; /* テキストを最初に配置 */
+                margin-bottom: -6rem; /* 画像を上に引き上げる */
             }
 
             .career-details .details-list {
@@ -967,15 +967,15 @@
             }
             
             .career-main .career-description, .career-details .details-list {
-                line-height: 1.7; /* Ensure text is readable */
+                line-height: 1.7; /* テキストの可読性を確保 */
             }
 
             .career-mobile-img {
-                display: block !important; /* Show mobile image (forced) */
-                max-width: 90%; /* Adjust size as needed */
+                display: block !important; /* モバイル用画像を表示（強制） */
+                max-width: 90%; /* 必要に応じてサイズを調整 */
                 height: auto;
-                margin: 0 auto 2rem auto; /* Center and add spacing */
-                order: 2; /* Place image second */
+                margin: 0 auto 2rem auto; /* 中央揃えしてスペースを追加 */
+                order: 2; /* 画像を2番目に配置 */
             }
         }
 
@@ -997,7 +997,7 @@
             }
         }
 
-        /* Parallax Elements */
+        /* パララックス要素 */
         .parallax-bg {
             position: absolute;
             top: 0;
@@ -1013,7 +1013,7 @@
             z-index: 1;
         }
 
-        /* Animation Classes */
+        /* アニメーションクラス */
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(50px);
@@ -1025,21 +1025,21 @@
             transform: translateY(0);
         }
 
-        /* Smooth Scrolling */
+        /* スムーズスクロール */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Final Career Section Adjustments */
+        /* Careerセクションの最終調整 */
         .career-layout-final {
-            align-items: center; /* Center vertically */
-            justify-content: flex-start; /* Align text to the left */
+            align-items: center; /* 垂直方向に中央揃え */
+            justify-content: flex-start; /* テキストを左揃えに */
         }
 
         .career-text-content-final {
-            padding: 2.5rem; /* Keep general padding */
+            padding: 2.5rem; /* 全体的なパディングを維持 */
             transform: translateY(-100px);
-            max-width: 800px; /* Make text block even wider */
+            max-width: 800px; /* テキストブロックをさらに広く */
         }
 
         @media (max-width: 992px) {
@@ -1048,40 +1048,40 @@
             }
         }
 
-        /* Hide mobile image on desktop */
+        /* デスクトップではモバイル用画像を非表示に */
         .career-mobile-img {
             display: none;
         }
 
         
 
-        /* Timeline Mobile Layout */
+        /* Timelineセクション モバイルレイアウト */
         @media (max-width: 768px) {
             .timeline-line {
-                left: 20px; /* A bit more space from the edge */
+                left: 20px; /* 端から少しスペースを空ける */
             }
 
             .timeline-item,
             .timeline-item:nth-child(even) {
                 width: 100%;
                 left: 0;
-                padding-left: 50px; /* Consistent padding for all items */
-                padding-right: 15px; /* Add some padding on the right */
+                padding-left: 50px; /* すべてのアイテムに一貫したパディングを適用 */
+                padding-right: 15px; /* 右側にパディングを追加 */
             }
             
-            /* Ensure odd items are also reset */
+            /* 奇数番目のアイテムもリセットされていることを確認 */
             .timeline-item:nth-child(odd) {
                 left: 0;
             }
 
             .timeline-content {
-                padding: 1rem 0; /* Adjust padding */
+                padding: 1rem 0; /* パディングを調整 */
             }
 
             .timeline-item:nth-child(even) .timeline-content,
             .timeline-item:nth-child(odd) .timeline-content {
-                flex-direction: column; /* Force column layout for all */
-                align-items: flex-start; /* Align all content to the left */
+                flex-direction: column; /* すべてのアイテムに強制的にカラムレイアウトを適用 */
+                align-items: flex-start; /* すべてのコンテンツを左揃えに */
             }
             
             .timeline-item:nth-child(even) .timeline-text,
@@ -1095,18 +1095,18 @@
                 justify-content: flex-start;
             }
 
-            /* Corrected marker alignment */
+            /* マーカーの位置を修正 */
             .timeline-item:nth-child(odd) .timeline-marker,
             .timeline-item:nth-child(even) .timeline-marker {
                 left: 20px;
-                right: auto; /* Reset right property */
+                right: auto; /* rightプロパティをリセット */
                 transform: translate(-50%, -50%);
             }
 
             .timeline-image {
-                width: 100px; /* Adjust size */
+                width: 100px; /* サイズを調整 */
                 height: 100px;
-                align-self: flex-start; /* Align image to the left */
+                align-self: flex-start; /* 画像を左揃えに */
             }
 
             .timeline-content h3 {
@@ -1114,14 +1114,14 @@
             }
         }
 
-        /* Final Skills Section Adjustments */
+        /* Skillsセクションの最終調整 */
         @media (max-width: 992px) {
             #skills .content-grid {
                 grid-template-columns: 1fr;
             }
         }
 
-/* Projects Grid & Cards */
+/* プロジェクトグリッドとカード */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1168,7 +1168,7 @@
     color: var(--medium-gray);
 }
 
-/* Modal Overlay */
+/* モーダルオーバーレイ */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -1238,7 +1238,7 @@
     flex: 1;
 }
 
-/* Image Carousel in Modal */
+/* モーダル内の画像カルーセル */
 .modal-img-container {
     flex: 1.5;
     max-width: 60%;
@@ -1261,7 +1261,7 @@
 
 .carousel-img.active {
     opacity: 1;
-    position: relative; /* Gives the container its intrinsic size */
+    position: relative; /* コンテナに固有のサイズを与える */
 }
 
 .modal-img-prev, .modal-img-next {
@@ -1299,7 +1299,7 @@
     border-radius: 8px 0 0 8px;
 }
 
-/* Adjustments for carousel within modal layout */
+/* モーダルレイアウト内のカルーセルの調整 */
 @media (max-width: 992px) {
     .modal-img-container {
         max-width: 100%;
@@ -1321,7 +1321,7 @@
     }
 }
 
-/* Sticky modal close button for mobile/tablet */
+/* モバイル/タブレット用のスティッキーな閉じるボタン */
 @media (max-width: 992px) {
     .modal-close {
         position: sticky;
@@ -1330,3 +1330,5 @@
         margin-left: auto;
     }
 }
+
+

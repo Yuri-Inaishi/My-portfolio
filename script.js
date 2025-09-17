@@ -1,13 +1,13 @@
-// Intersection Observer for scroll-triggered animations
+// スクロールで発火するアニメーションのためのIntersection Observer
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px'
         };
 
-        // Track animated sections to prevent re-animation
+        // アニメーションの再実行を防ぐためにセクションを追跡
         const animatedSections = new Set();
 
-        // Section observer
+        // セクション用のObserver
         const sectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting && !animatedSections.has(entry.target.id)) {
@@ -17,25 +17,25 @@
             });
         }, observerOptions);
 
-        // Navigation observer
+        // ナビゲーション用のObserver
         const navObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const navDot = document.querySelector(`.floating-nav [href="#${entry.target.id}"]`);
                 const headerNavLink = document.querySelector(`.header-nav [href="#${entry.target.id}"]`);
                 
                 if (entry.isIntersecting) {
-                    // Update floating nav
+                    // フローティングナビゲーションの更新
                     document.querySelectorAll('.nav-dot').forEach(dot => dot.classList.remove('active'));
                     if (navDot) navDot.classList.add('active');
                     
-                    // Update header nav
+                    // ヘッダーナビゲーションの更新
                     document.querySelectorAll('.header-nav a').forEach(link => link.classList.remove('active'));
                     if (headerNavLink) headerNavLink.classList.add('active');
                 }
             });
         }, { threshold: 0.15 });
 
-        // Animate section function
+        // セクションをアニメーションさせる関数
         function animateSection(section) {
             requestAnimationFrame(() => {
                 section.classList.add('animate');
@@ -54,7 +54,7 @@
             });
         }
 
-        // Progress bar update
+        // プログレスバーの更新
         function updateProgressBar() {
             const scrollTop = window.pageYOffset;
             const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -62,7 +62,7 @@
             document.querySelector('.progress-bar').style.width = scrollPercent + '%';
         }
 
-        // Parallax effect for hero section (Disabled for performance testing)
+        // ヒーローセクションのパララックス効果（パフォーマンステストのため無効化）
         /*
         function updateParallax() {
             const scrollY = window.pageYOffset;
@@ -73,7 +73,7 @@
         }
         */
 
-        // Particle system
+        // パーティクルシステム
         function createParticle() {
             const particle = document.createElement('div');
             particle.className = 'particle';
@@ -87,20 +87,20 @@
             }, 8000);
         }
 
-        // Optimized scroll handler with requestAnimationFrame
+        // requestAnimationFrameを使った最適化されたスクロールハンドラ
         let ticking = false;
         function handleScroll() {
             if (!ticking) {
                 requestAnimationFrame(() => {
                     updateProgressBar();
-                    // updateParallax(); // Disabled for performance testing
+                    // updateParallax(); // パフォーマンステストのため無効化
                     ticking = false;
                 });
                 ticking = true;
             }
         }
 
-        // Navigation click handler
+        // ナビゲーションクリック時のハンドラ
         function handleNavClick(e) {
             e.preventDefault();
             const target = document.querySelector(e.target.getAttribute('href'));
@@ -112,7 +112,7 @@
             }
         }
 
-        // Header navigation click handler
+        // ヘッダーナビゲーションクリック時のハンドラ
         function handleHeaderNavClick(e) {
             e.preventDefault();
             const targetId = e.target.getAttribute('href');
@@ -125,15 +125,15 @@
             }
         }
 
-        // Initialize observers and event listeners
+        // Observerとイベントリスナーの初期化
         document.addEventListener('DOMContentLoaded', () => {
-            // Observe all sections
+            // 全てのセクションを監視
             document.querySelectorAll('section').forEach(section => {
                 sectionObserver.observe(section);
                 navObserver.observe(section);
             });
 
-            // Timeline item observer for individual animation
+            // タイムラインアイテムを個別にアニメーションさせるためのObserver
             const timelineItemObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -147,20 +147,20 @@
                 timelineItemObserver.observe(item);
             });
 
-            // Add scroll event listener (passive for performance)
+            // スクロールイベントリスナーを追加（パフォーマンスのためpassive指定）
             window.addEventListener('scroll', handleScroll, { passive: true });
 
-            // Add navigation click handlers
+            // ナビゲーションのクリックハンドラを追加
             document.querySelectorAll('.nav-dot').forEach(dot => {
                 dot.addEventListener('click', handleNavClick);
             });
 
-            // Add header navigation click handlers
+            // ヘッダーナビゲーションのクリックハンドラを追加
             document.querySelectorAll('.header-nav a').forEach(link => {
                 link.addEventListener('click', handleHeaderNavClick);
             });
 
-            // Scroll indicator click handler
+            // スクロールインジケーターのクリックハンドラ
             const scrollIndicator = document.querySelector('.scroll-indicator');
             if (scrollIndicator) {
                 scrollIndicator.addEventListener('click', () => {
@@ -170,13 +170,13 @@
                 });
             }
 
-            // Create particles periodically
+            // パーティクルを定期的に生成
             setInterval(createParticle, 2000);
 
-            // Initial progress bar update
+            // プログレスバーの初回更新
             updateProgressBar();
 
-            // Animate hero section immediately
+            // ヒーローセクションをすぐにアニメーションさせる
             const heroSection = document.getElementById('hero');
             if (heroSection) {
                 heroSection.classList.add('animate');
@@ -184,7 +184,7 @@
 
             
 
-            // Modal functionality
+            // モーダル機能
             const openModalButtons = document.querySelectorAll('[data-modal-target]');
             const closeModalButtons = document.querySelectorAll('.modal-close');
             const overlays = document.querySelectorAll('.modal-overlay');
@@ -221,7 +221,7 @@
                 modal.classList.remove('active');
             }
 
-            // Image carousel for modals
+            // モーダル内の画像カルーセル
             document.querySelectorAll('.modal-img-container').forEach(container => {
                 const prevButton = container.querySelector('.modal-img-prev');
                 const nextButton = container.querySelector('.modal-img-next');
@@ -240,7 +240,7 @@
                     if (initialActiveIndex !== -1) {
                         currentIndex = initialActiveIndex;
                     }
-                    updateImages(); // Call initially to set the correct image
+                    updateImages(); // 初期表示で正しい画像を設定するために呼び出す
 
                     prevButton.addEventListener('click', (e) => {
                         e.stopPropagation();
@@ -257,12 +257,12 @@
             });
         });
 
-        // Handle reduced motion preference
+        // 動きを減らす設定への対応
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
             document.documentElement.style.setProperty('--animation-duration', '0.01ms');
         }
 
-        // Cleanup on page unload
+        // ページ離脱時のクリーンアップ
         window.addEventListener('beforeunload', () => {
             sectionObserver.disconnect();
             navObserver.disconnect();
@@ -272,7 +272,7 @@
 
         
 
-// Hero background image loading
+// ヒーロー背景画像の読み込み
 window.addEventListener('load', () => {
     const heroSection = document.getElementById('hero');
     if (heroSection) {
