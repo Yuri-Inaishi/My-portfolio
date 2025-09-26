@@ -30,4 +30,4 @@
 
 - **名前**: 稲石 湧李 (Yuri Inaishi)
 - **Email**: yuri.0228ex @gmail.com
-- **GitHub**: [yourusername](https://github.com/yourusername) (ご自身のGitHubユーザー名に変更してください)
+- **GitHub**: [Yuri-Inaishi](https://github.com/Yuri-Inaishi)
