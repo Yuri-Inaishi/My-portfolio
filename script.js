@@ -62,17 +62,6 @@
             document.querySelector('.progress-bar').style.width = scrollPercent + '%';
         }
 
-        // ヒーローセクションのパララックス効果（パフォーマンステストのため無効化）
-        /*
-        function updateParallax() {
-            const scrollY = window.pageYOffset;
-            const heroSection = document.querySelector('.hero-section');
-            if (heroSection) {
-                heroSection.style.transform = `translateY(${scrollY * 0.5}px)`;
-            }
-        }
-        */
-
         // パーティクルシステム
         function createParticle() {
             const particle = document.createElement('div');

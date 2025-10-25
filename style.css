@@ -1014,15 +1014,17 @@
         }
 
         /* アニメーションクラス */
+        /* 初期状態（スタート地点） */
         .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            opacity: 0; /* 透明 */
+            transform: translateY(50px); /* 下に50px */
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 0.6sかけて滑らか(ease-out)に変化する */
         }
 
+        /* 表示状態（ゴール地点） */
         .animate-on-scroll.is-visible {
-            opacity: 1;
-            transform: translateY(0);
+            opacity: 1; /* 半透明 */
+            transform: translateY(0); /* 元の位置 */
         }
 
         /* スムーズスクロール */
