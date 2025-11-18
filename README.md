@@ -15,7 +15,8 @@
     <td width="50%">
       <h3>レスポンシブデザイン</h3>
       <p>PC、タブレット、スマートフォンなど、あらゆるデバイスで最適に表示されます。</p>
-      <img src="images/responsive-screenshot.png" alt="レスポンシブデザイン" width="100%"/>
+      <img src="images/responsive-pc.png" alt="PC表示" width="48%"/>
+      <img src="images/responsive-mobile.png" alt="スマホ表示" width="48%"/>
     </td>
     <td width="50%">
       <h3>インタラクティブなUI</h3>
