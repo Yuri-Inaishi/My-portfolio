@@ -15,12 +15,12 @@
     <td width="50%">
   <h3>レスポンシブデザイン</h3>
   <p>PC、タブレット、スマートフォンなど、あらゆるデバイスで最適に表示されます。</p>
-  <img src="images/responsive-pc.png" alt="PC表示" height="200"/>
-  <img src="images/responsive-mobile.png" alt="スマホ表示" height="200"/>
+  <img src="images/responsive-pc.png" alt="PC表示" height="225"/>
+  <img src="images/responsive-mobile.png" alt="スマホ表示" height="225"/>
 </td>
     <td width="50%">
       <h3>インタラクティブなUI</h3>
-      <p>スクロールに応じたアニメーションや、プロジェクト詳細を閲覧できるモーダルウィンドウを実装し、ユーザー体験の向上を目指しました。</p>
+      <p>スクロールに応じたアニメーションや、プロジェクト詳細を閲覧できるモーダルウィンドウを実装しました。</p>
       <img src="images/interactive-ui-screenshot.png" alt="インタラクティブUI" width="100%"/>
     </td>
   </tr>
