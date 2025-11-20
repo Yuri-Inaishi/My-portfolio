@@ -4,9 +4,11 @@
 
 ![ポートフォリオサイトのスクリーンショット](images/portfolio-screenshot.png)
 
+
 ## 概要
 
 プラント設計エンジニアからWeb開発者へのキャリアチェンジを目指し、制作したポートフォリオサイトです。基本設計とコーディングは自身で行い、複雑な実装において Google Gemini CLI と Claude を補助的に活用することで、効率的かつ実践的な開発スキルの習得に取り組みました。
+
 
 ## 主な特徴
 
@@ -38,16 +40,21 @@
   </tr>
 </table>
 
+
 ## 使用技術
 
-- **HTML5**
-- **CSS3**: Flexbox, Grid Layout, Keyframe Animationsなどを活用しています。
-- **JavaScript (ES6+)**: Intersection Observer APIを使用したスクロールイベントの制御や、モーダルウィンドウ、ナビゲーションの制御などを実装しています。
-- **Git / GitHub**: バージョン管理を行っています。
+| 技術 | 説明 |
+|------|------|
+| **HTML5** | セマンティックなマークアップを実装 |
+| **CSS3** | Flexbox, Grid Layout, Keyframe Animationsなどを活用 |
+| **JavaScript (ES6+)** | Intersection Observer APIを使用したスクロールイベントの制御、モーダルウィンドウ、ナビゲーションの制御などを実装 |
+| **Git / GitHub** | バージョン管理を行っています |
+
 
 ## セットアップ
 
 特別なセットアップは不要です。`index.html`ファイルをブラウザで開くことで、ポートフォリオを閲覧できます。
+
 
 ## 作者
 
