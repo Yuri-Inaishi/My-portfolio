@@ -19,10 +19,10 @@
   <img src="images/responsive-mobile.png" alt="スマホ表示" height="180"/>
 </td>
     <td width="50%">
-      <h3>インタラクティブなUI</h3>
-      <p>スクロールアニメーションや、プロジェクト詳細を閲覧できるモーダルウィンドウを実装しました。</p>
-      <img src="images/interactive-ui-screenshot.png" alt="インタラクティブUI" width="100%"/>
-    </td>
+  <h3>インタラクティブなUI</h3>
+  <p>スクロールアニメーションや、プロジェクト詳細を閲覧できるモーダルウィンドウを実装しました。</p>
+  <img src="videos/interactive-ui-demo.gif" alt="インタラクティブUI" width="100%"/>
+</td>
   </tr>
   <tr>
     <td width="50%">
