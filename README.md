@@ -21,7 +21,7 @@
     <td width="50%">
   <h3>インタラクティブなUI</h3>
   <p>スクロールアニメーションや、プロジェクト詳細を閲覧できるモーダルウィンドウを実装しました。</p>
-  <img src="videos/interactive-ui-demo.gif" alt="インタラクティブUI" width="100%"/>
+  <img src="videos/interactive-ui-demo.gif" alt="インタラクティブUI" height="180"/>
 </td>
   </tr>
   <tr>
