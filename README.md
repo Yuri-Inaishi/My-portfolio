@@ -19,11 +19,13 @@
   <img src="images/responsive-mobile.png" alt="スマホ表示" height="180"/>
 </td>
     <td width="50%">
-      <h3>インタラクティブなUI</h3>
-      <p>スクロールアニメーションや、プロジェクト詳細を閲覧できるモーダルウィンドウを実装しました。</p>
-      <img src="images/interactive-ui-screenshot.png" alt="インタラクティブUI" width="100%"/>
-    </td>
-  </tr>
+  <h3>インタラクティブなUI</h3>
+  <p>スクロールアニメーションや、プロジェクト詳細を閲覧できるモーダルウィンドウを実装しました。</p>
+  <video width="100%" controls autoplay muted loop>
+    <source src="videos/interactive-ui-demo.mp4" type="video/mp4">
+    お使いのブラウザは動画タグをサポートしていません。
+  </video>
+</td>
   <tr>
     <td width="50%">
       <h3>視覚的なタイムライン</h3>
