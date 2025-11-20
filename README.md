@@ -18,7 +18,7 @@
   <img src="images/responsive-pc.png" alt="PC表示" height="180"/>
   <img src="images/responsive-mobile.png" alt="スマホ表示" height="180"/>
 </td>
-    <td width="50%">
+   <td width="50%">
   <h3>インタラクティブなUI</h3>
   <p>スクロールアニメーションや、プロジェクト詳細を閲覧できるモーダルウィンドウを実装しました。</p>
   <video width="100%" controls autoplay muted loop>
