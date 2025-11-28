@@ -715,11 +715,6 @@
             align-items: center;
         }
 
-        .timeline-title-group {
-            display: flex;
-            align-items: center;
-        }
-
         .timeline-item:nth-child(even) .timeline-text {
             justify-content: flex-end;
             text-align: right;
@@ -727,12 +722,10 @@
 
         .timeline-period {
             margin-right: 1rem;
-            white-space: nowrap;
+            white-space: nowrap;　/*折り返しを禁止する*/
         }
 
-        .timeline-organization,
-        .timeline-content p,
-        .timeline-skills {
+        .timeline-content p {
             flex-basis: 100%;
             margin-top: 0.75rem;
         }
@@ -745,38 +738,11 @@
             white-space: nowrap;
         }
 
-        .timeline-organization {
-            color: var(--medium-gray);
-            font-size: 1rem;
-            font-weight: 500;
-            margin-bottom: 0;
-        }
-
         .timeline-content p {
             color: var(--accent-gray);
             line-height: 1.7;
             font-size: 1rem;
             margin-bottom: 0;
-        }
-
-        .timeline-skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .timeline-item:nth-child(even) .timeline-skills {
-            justify-content: flex-end;
-        }
-
-        .skill-tag {
-            background: var(--background-gray);
-            color: var(--primary-black);
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            border: 1px solid var(--very-light-gray);
         }
 
         /* Contactセクション固有のスタイル */
