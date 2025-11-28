@@ -676,42 +676,42 @@
 
         .timeline-item:nth-child(odd) .timeline-marker {　/*odd=奇数番目　奇数番目のtimeline-markerを対象*/
             left: 0;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);　/*要素を中央に配置*/
         }
         .timeline-item:nth-child(even) .timeline-marker {　/*even=偶数番目　偶数番目のtimeline-markerを対象*/
             right: 0;
-            transform: translate(50%, -50%);
+            transform: translate(50%, -50%);　/*要素を中央に配置*/
         }
 
         .timeline-content {
             display: flex;
             gap: 2rem;
             align-items: center;
-            position: relative;
+            position: relative;　/*元の位置を基準にする*/
         }
 
         .timeline-image {
-            flex-shrink: 0;
+            flex-shrink: 0;　/*Flexboxで縮まないように固定、デフォルトが1*/
             width: 180px;
             height: 180px;
             border-radius: 50%;
             background: var(--background-gray);
             border: 2px solid var(--very-light-gray);
-            overflow: hidden;
+            overflow: hidden;　/*中身がはみ出た場合は隠す(画像の円形化のため)*/
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .timeline-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover;　/*親のサイズに合わせて画像を切り抜きつつ表示、縦横比を保つ*/
         }
 
         .timeline-text {
-            flex: 1;
-            min-width: 0;
+            flex: 1;　/*Flexコンテナ内で残りのスペースを全部使う*/
+            min-width: 0;　/*子要素の長さによって勝手に横幅が広がるのを防ぐ*/
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap;　/*折り返しにする*/
             align-items: center;
         }
 
