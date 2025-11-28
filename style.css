@@ -4,7 +4,7 @@
             box-sizing: border-box;
         }
 
-        :root {
+        :root {　/*--変数名で変数定義しておくことにより管理が楽になる*/
             --primary-black: #2d2d2d;
             --dark-gray: #404040;
             --medium-gray: #5a5a5a;
@@ -637,28 +637,28 @@
             position: relative;
             width: 50%;
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(50px); /*要素をY方向に50px下へ移動させる(-50は上方向への移動)*/
             transition: all 1.0s ease;
         }
 
         .timeline-item.animate {
             opacity: 1;
-            transform: translateY(0);
+            transform: translateY(0); /*元の位置に戻す*/
         }
 
         /* 奇数番目のアイテムを右側に */
-        .timeline-item:nth-child(odd) {
-            left: 50%;
+        .timeline-item:nth-child(odd) {　/*odd=奇数番目　奇数番目のtimeline-itemを対象*/
+            left: 50%;　/*左側に配置　要素の左端を親要素の幅の50％(中央)に合わせる*/
             padding-left: 60px;
         }
 
         /* 偶数番目のアイテムを左側に */
-        .timeline-item:nth-child(even) {
+        .timeline-item:nth-child(even) {　/*even=偶数番目　偶数番目のtimeline-itemを対象*/
             padding-right: 60px;
         }
 
         .timeline-item:nth-child(even) .timeline-content {
-            flex-direction: row-reverse;
+            flex-direction: row-reverse;　/*右から左に並べる*/
         }
 
         .timeline-marker {
@@ -674,11 +674,11 @@
             background: var(--background-gray);
         }
 
-        .timeline-item:nth-child(odd) .timeline-marker {
+        .timeline-item:nth-child(odd) .timeline-marker {　/*odd=奇数番目　奇数番目のtimeline-markerを対象*/
             left: 0;
             transform: translate(-50%, -50%);
         }
-        .timeline-item:nth-child(even) .timeline-marker {
+        .timeline-item:nth-child(even) .timeline-marker {　/*even=偶数番目　偶数番目のtimeline-markerを対象*/
             right: 0;
             transform: translate(50%, -50%);
         }
