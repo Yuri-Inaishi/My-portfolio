@@ -4,7 +4,7 @@
             box-sizing: border-box;
         }
 
-        :root { /*変数として定義　メリット；管理がしやすい、コードが見やすい*/
+        :root { /*CSS変数として定義　メリット；管理がしやすい、コードが見やすい*/
             --primary-black: #2d2d2d;
             --dark-gray: #404040;
             --medium-gray: #5a5a5a;
@@ -708,10 +708,10 @@
         }
 
         .timeline-text {
-            flex: 1;
-            min-width: 0;
+            flex: 1; /*Flexコンテナ内で残りのスペースを全部使う*/
+            min-width: 0; /*子要素の長さによって勝手に横幅が広がるのを防ぐ*/
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap; /*子要素を横幅いっぱいで折り返す*/
             align-items: center;
         }
 
