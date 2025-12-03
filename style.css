@@ -4,7 +4,7 @@
             box-sizing: border-box;
         }
 
-        :root {
+        :root { /*変数として定義　メリット；管理がしやすい、コードが見やすい*/
             --primary-black: #2d2d2d;
             --dark-gray: #404040;
             --medium-gray: #5a5a5a;
@@ -647,18 +647,18 @@
         }
 
         /* 奇数番目のアイテムを右側に */
-        .timeline-item:nth-child(odd) {
-            left: 50%;
+        .timeline-item:nth-child(odd) { /*odd:奇数番目、奇数番目のtimeline-itemを対象にする*/
+            left: 50%; /*左端を親要素の幅の50%（中央）に合わせる*/
             padding-left: 60px;
         }
 
         /* 偶数番目のアイテムを左側に */
-        .timeline-item:nth-child(even) {
+        .timeline-item:nth-child(even) {　/*even:偶数番目、偶数番目のtimeline-itemを対象にする*/
             padding-right: 60px;
         }
 
-        .timeline-item:nth-child(even) .timeline-content {
-            flex-direction: row-reverse;
+        .timeline-item:nth-child(even) .timeline-content {　/*even:偶数番目、偶数番目のtimeline-itemを対象にする*/
+            flex-direction: row-reverse; /*Flexboxの方向を逆にする row:左から右に並ぶ(デフォ) row-reverse:左から右に並ぶ*/
         }
 
         .timeline-marker {
@@ -674,13 +674,13 @@
             background: var(--background-gray);
         }
 
-        .timeline-item:nth-child(odd) .timeline-marker {
+        .timeline-item:nth-child(odd) .timeline-marker { /*odd:奇数番目、奇数番目のtimeline-markerを対象にする*/
             left: 0;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); /*translate(x,y):要素をx方向y方向に移動させる、中央配置*/
         }
-        .timeline-item:nth-child(even) .timeline-marker {
+        .timeline-item:nth-child(even) .timeline-marker { /*even:偶数番目、偶数番目のtimeline-markerを対象にする*/
             right: 0;
-            transform: translate(50%, -50%);
+            transform: translate(50%, -50%); /*translate(x,y):要素をx方向y方向に移動させる、中央配置*/
         }
 
         .timeline-content {
@@ -691,20 +691,20 @@
         }
 
         .timeline-image {
-            flex-shrink: 0;
+            flex-shrink: 0; /*Flexboxで縮まないように固定*/
             width: 180px;
             height: 180px;
-            border-radius: 50%;
+            border-radius: 50%; /*丸くして円形にする*/
             background: var(--background-gray);
             border: 2px solid var(--very-light-gray);
-            overflow: hidden;
+            overflow: hidden; /*中身がはみ出た場合は隠す(画像の円形化の為)*/
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .timeline-image img {
             width: 100%;
             height: 100%;
-            object-fit: cover;
+            object-fit: cover; /* 親のサイズに合わせて画像を切り抜きつつ表示、縦横比を保つ */
         }
 
         .timeline-text {
