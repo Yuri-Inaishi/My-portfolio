@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=fallback" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="preload" as="image" href="images/hero-background.png">
 </head>
 <body>
     <div class="bg-animation"></div>
@@ -41,10 +42,10 @@
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <div class="hero-content">
-                <h1>Yuri's Portfolio</h1>
-                <p>Web Developer</p>
-            </div>
-        </section>
+            <h1>Yuri's Portfolio</h1>
+            <p>Web Developer</p>
+        </div>
+    </section>
 
     <!-- About Section -->
     <section id="about" class="content-section">
@@ -70,12 +71,11 @@
                 <h2 class="section-title">Career</h2>
                 <p class="section-subtitle">プラント設計エンジニアとしての経験とスキル</p>
             </div>
-            <div class="career-layout-final">
-                <!-- This image will be shown only on mobile -->
-                <img src="images/ChatGPT Image 2025年9月6日 07_35_17.png" alt="キャリアイラスト" class="career-mobile-img">
-                <div class="career-text-content-final">
+            <div class="career-layout">
+                <div class="career-text-content">
                     <div class="career-main">
-                        <p class="career-description">化学プラントの設計エンジニアとして、安全性と効率性を両立するシステム設計に従事。<br>大規模プロジェクトの推進経験をWeb開発に活かします。</p>
+                        <h4 class="career-main-title">約5年間の経験</h4>
+                        <p class="career-description">安全性と効率性を両立するシステム設計に従事しました。<br>大規模プロジェクトの推進経験をWeb開発に活かします。</p>
                     </div>
                     <div class="career-details">
                         <h4 class="details-title">主な実績と習得スキル</h4>
@@ -87,6 +87,10 @@
                             <li>技術文書作成および新人教育の経験</li>
                         </ul>
                     </div>
+                </div>
+
+                <div class="career-image">
+                    <img src="images/Career_Image.png" alt="キャリアイラスト">
                 </div>
             </div>
         </div>
@@ -100,15 +104,14 @@
                 <p class="section-subtitle">現在のスキルと今後の学習予定</p>
             </div>
             <div class="content-grid">
-                
-                
+
                 <div class="content-card">
                     <h3>Web開発スキル</h3>
                     <ul class="skill-list">
                         <li><span class="material-icons">code</span> HTML5 / CSS3</li>
                         <li><span class="material-icons">developer_mode</span> JavaScript (ES6+)</li>
                         <li><span class="material-icons">devices</span> レスポンシブデザイン</li>
-                        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 10px; vertical-align: text-bottom;"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg> Git / GitHub</li>
+                        <li><span class="material-icons">github</span> Git / GitHub</li>
                         <li><span class="material-icons">laptop_mac</span> VS Code</li>
                     </ul>
                 </div>
@@ -154,7 +157,7 @@
         </div>
     </section>
 
-    <!-- Modals -->
+    <!-- Projects Section Modals -->
     <div class="modal-overlay" id="project1">
         <div class="modal-content">
             <button class="modal-close">&times;</button>
@@ -182,7 +185,7 @@
     <div class="modal-overlay" id="project2">
         <div class="modal-content">
             <button class="modal-close">&times;</button>
-            <img src="images/スクリーンショット 2025-09-06 7.57.00.png" alt="ホームページの模写のスクリーンショット" class="modal-img">
+            <img src="images/website-copy.png" alt="ホームページの模写のスクリーンショット" class="modal-img">
             <div class="modal-text">
                 <h2>ホームページの模写</h2>
                 <p>プログラミングの勉強を開始して初めて制作した物になります。自分なりに一部レイアウトを変更して見やすくする工夫をしました。</p>
@@ -235,7 +238,7 @@
         <div class="section-container">
             <div class="section-header">
                 <h2 class="section-title">Timeline</h2>
-                <p class="section-subtitle">これまでの歩みを記します</p>
+                <p class="section-subtitle">これまでの私の歩みを記します</p>
             </div>
             <div class="timeline-container">
                 <div class="timeline-line"></div>
@@ -250,7 +253,7 @@
                         <div class="timeline-text">
                             <div class="timeline-period">1999.02.28</div>
                             <h3>誕生</h3>
-                            <p>愛知県豊川市で生まれ、人生のスタートを切ります</p>
+                            <p>愛知県豊川市で生まれ、人生のスタートを切ります。</p>
                         </div>
                     </div>
                 </div>
@@ -273,12 +276,12 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="images/timeline-4thgrade-new.png" alt="小学４年生">
+                            <img src="images/timeline-4thgrade.png" alt="小学４年生">
                         </div>
                         <div class="timeline-text">
                             <div class="timeline-period">2005 - 2011</div>
                             <h3>小学生</h3>
-                            <p>ダンスに出会う。シャイな性格故、大人数の中隅っこで練習していると中々上達せず。ですが負けず嫌いを発揮し自分に喝を入れて通い続けます。</p>
+                            <p>ダンス教室に通う。シャイな性格故、隅っこで練習していると一向に上達せず。ですが負けず嫌いな性格から自分に喝を入れて通い続けます。</p>
                         </div>
                     </div>
                 </div>
@@ -287,7 +290,7 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="images/timeline-juniorhigh-new.png" alt="中学生">
+                            <img src="images/timeline-juniorhigh.png" alt="中学生">
                         </div>
                         <div class="timeline-text">
                             <div class="timeline-period">2011 - 2014</div>
@@ -301,12 +304,12 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="images/timeline-highschool-new.png" alt="高校生">
+                            <img src="images/timeline-highschool.png" alt="高校生">
                         </div>
                         <div class="timeline-text">
                             <div class="timeline-period">2014 - 2017</div>
                             <h3>高校生</h3>
-                            <p>料理に目覚める。両親の仕事の都合で、家族全員分の夕食を約4年間作り続ける。決して苦痛ではなく、むしろ楽しく、めきめきと上達していった。</p>
+                            <p>料理に目覚めます。両親の仕事の都合で、家族の夕食を約4年間作り続ける。決して苦痛ではなく、むしろ楽しく、めきめきと腕をあげました。</p>
                         </div>
                     </div>
                 </div>
@@ -315,12 +318,12 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="images/timeline-university-2.png" alt="大学生">
+                            <img src="images/timeline-university.png" alt="大学生">
                         </div>
                         <div class="timeline-text">
                             <div class="timeline-period">2017 - 2021</div>
                             <h3>大学生</h3>
-                            <p>機械工学科に入学し、専門知識を学びました。機械材料の研究をして知識を深めました。</p>
+                            <p>工学部機械工学科に入学し、専門知識を学びます。機械材料の研究をして知識を深めました。</p>
                         </div>
                     </div>
                 </div>
@@ -343,13 +346,11 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="images/ChatGPT Image 2025年11月15日 15_27_21.png" alt="社会人４年目">
+                            <img src="images/timeline-work-4thgrade.png" alt="社会人４年目">
                         </div>
                         <div class="timeline-text">
-                            <div class="timeline-title-group">
-                                <div class="timeline-period">2024 - 2025</div>
-                                <h3>社会人４年目</h3>
-                            </div>
+                            <div class="timeline-period">2024 - 2025</div>
+                            <h3>社会人4年目</h3>
                             <p>約3,000億円の大規模案件チームへ選抜される。7時出社、22時帰宅の日々が約一年間続き、心も体も疲弊していく。自分で作った栄養満点弁当だけを心の支えとして、なんとか命を繋ぎました。</p>
                         </div>
                     </div>
@@ -359,14 +360,12 @@
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-image">
-                            <img src="images/ChatGPT Image 2025年11月15日 15_14_41.png" alt="現在">
+                            <img src="images/timeline-now.png" alt="現在">
                         </div>
                         <div class="timeline-text">
-                            <div class="timeline-title-group">
-                                <div class="timeline-period">2025 -</div>
-                                <h3>現在</h3>
-                            </div>
-                            <p>仕事と並行しながらプログラミングを独学で勉強しています。難しくわからないことだらけですが、コツコツ頑張っています。</p>
+                            <div class="timeline-period">2025 -</div>
+                            <h3>現在</h3>
+                            <p>仕事と並行してプログラミングを独学で勉強しています。難しくわからないことだらけですが、コツコツ取組んでいます。</p>
                         </div>
                     </div>
                 </div>
@@ -383,13 +382,13 @@
             </div>
             <div class="contact-content">
                 <div class="contact-buttons-section">
-                    <a href="mailto:yuri.0228ex @gmail.com" class="contact-btn-section" target="_blank">
+                    <a href="mailto:yuri.0228ex@gmail.com" class="contact-btn-section" target="_blank">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                         </svg>
                         Email
                     </a>
-                    <a href="https://github.com/yourusername" class="contact-btn-section" target="_blank">
+                    <a href="https://github.com/Yuri-Inaishi" class="contact-btn-section" target="_blank">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
