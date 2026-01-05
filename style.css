@@ -45,106 +45,7 @@ body {
   transition: width 0.3s ease;
 }
 
-/* ================================
-   Hero セクション
-   -------------------------------
-   ・トップの視覚的インパクトを担うメイン領域
-   ・コンテンツを中央揃えにし、背景画像のフェードイン演出を実装
-   ================================ */
-.hero-section {
-  min-height: 100vh; /* 画面全体の高さを確保 */
-  background-color: var(
-    --light-gray
-  ); /* 背景画像読み込み前のプレースホルダー色 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* コンテンツを縦中央へ */
-  align-items: center; /* コンテンツを横中央へ */
-  position: relative; /* ::before / ::after の配置用に基準を作る */
-  overflow: hidden; /* 擬似要素のはみ出しを隠す */
-  width: 100%;
-}
-
-/* --------------------------------
-     背景画像（フェードイン効果）
-     ・初期状態では opacity を 0 → 後に 1 にして徐々に表示
-     ・transition（opacity）のみを変化させることで高パフォーマンス
-  ---------------------------------- */
-.hero-section::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url("images/hero-background.png");
-  background-size: cover; /* 画面サイズに合わせて拡大縮小 */
-  background-position: center;
-  opacity: 0; /* 初期は非表示 */
-  transition: opacity 1.5s ease-in; /* 1.5秒かけて滑らかに表示 */
-  z-index: 1; /* 背景レイヤー */
-}
-
-/* --------------------------------
-     hero-loaded クラス追加で背景をフェードイン
-     → JSやIntersection Observerなどで追加する想定
-  ---------------------------------- */
-.hero-section.hero-loaded::after {
-  opacity: 1;
-}
-
-/* --------------------------------
-     トーンを落として文字の視認性を上げるオーバーレイ
-     ・背景画像の上に暗いフィルターを重ねて視認性向上
-  ---------------------------------- */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(45, 45, 45, 0.4); /* 背景を暗くする半透明レイヤー */
-  z-index: 2; /* 文字より下・背景より上 */
-}
-
-/* --------------------------------------------
-   Hero セクション内のメインコンテンツ
-   ・背景（::after・::before）の上に重ねて表示するため z-index:3 を設定
-   -------------------------------------------- */
-.hero-content {
-  text-align: center;
-  z-index: 3; /* 背景画像(z1) + オーバーレイ(z2) より前に表示するため */
-  max-width: 1400px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 2rem 80px;
-}
-
-.hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: var(--primary-black);
-}
-
-@media (max-width: 768px) {
-  .hero-content h1 {
-    font-size: 2.5rem;
-  }
-
-  .hero-content {
-    padding: 2rem 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-content {
-    padding: 2rem 15px;
-  }
-}
-
-/* ヘッダーナビゲーション */
+/* ヘッダーナビゲーション固有のスタイル */
 .header-nav {
   position: fixed;
   top: 2rem;
@@ -186,13 +87,14 @@ body {
   border-radius: 1px;
 }
 
+/* ヘッダーナビゲーション　タブレットレイアウト */
 @media (max-width: 768px) {
   .header-nav {
     display: none;
   }
 }
 
-/* フローティングナビゲーション */
+/* フローティングナビゲーション固有のスタイル */
 .floating-nav {
   position: fixed;
   top: 50%;
@@ -252,13 +154,95 @@ body {
   right: 25px;
 }
 
+/* フローティングナビゲーション　タブレットレイアウト */
 @media (max-width: 768px) {
   .floating-nav {
     display: none;
   }
 }
 
-/* コンテンツセクション */
+/* Hero セクション */
+.hero-section {
+  min-height: 100vh; /* 画面全体の高さを確保 */
+  background-color: var(--light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* コンテンツを縦中央へ */
+  align-items: center; /* コンテンツを横中央へ */
+  position: relative; /* ::before / ::after の配置用に基準を作る */
+  overflow: hidden; /* 擬似要素のはみ出しを隠す */
+  width: 100%;
+}
+
+/* 背景画像（フェードイン効果） */
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("images/hero-background.png");
+  background-size: cover; /* 画面サイズに合わせて拡大縮小 */
+  background-position: center;
+  opacity: 0; /* 初期は非表示 */
+  transition: opacity 1.5s ease-in; /* 1.5秒かけて滑らかに表示 */
+  z-index: 1; /* 背景レイヤー */
+}
+
+/* hero-loaded クラス追加で背景をフェードイン → JSで追加 */
+.hero-section.hero-loaded::after {
+  opacity: 1;
+}
+
+/* オーバーレイ（背景を暗くする半透明レイヤー） */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(45, 45, 45, 0.4); /* 背景を暗くする半透明レイヤー */
+  z-index: 2; /* 文字より下・背景より上 */
+}
+
+/* Heroセクション固有のスタイル */
+.hero-content {
+  text-align: center;
+  z-index: 3; /* 背景画像(z1) + オーバーレイ(z2) より上 */
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 80px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--primary-black);
+}
+
+/* Heroセクション タブレットレイアウト */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content {
+    padding: 2rem 20px;
+  }
+}
+
+/* Heroセクション モバイルレイアウト */
+@media (max-width: 480px) {
+  .hero-content {
+    padding: 1.5rem 15px;
+  }
+}
+
+/* コンテンツセクションクラス固有のスタイル */
 .content-section {
   min-height: 100vh;
   background: white;
@@ -333,6 +317,7 @@ section.content-section:nth-of-type(even) {
   line-height: 1.6;
 }
 
+/* コンテンツセクションクラス タブレットレイアウト */
 @media (max-width: 768px) {
   .section-container {
     padding: 3rem 20px;
@@ -343,6 +328,7 @@ section.content-section:nth-of-type(even) {
   }
 }
 
+/* コンテンツセクションクラス モバイルレイアウト */
 @media (max-width: 480px) {
   .section-container {
     padding: 3rem 15px;
@@ -465,12 +451,7 @@ section.content-section:nth-of-type(even) {
   color: var(--primary-black);
 }
 
-/* =========================================================
-   コンテンツグリッド（Skills セクション用）
-   - レスポンシブにカードを並べるグリッドレイアウト
-   - auto-fit + minmax で画面幅に合わせて列数を自動調整
-   - gap はカード間の余白
-   ========================================================= */
+/* Skillsセクション用のコンテンツグリッド */
 .content-grid {
   display: grid; /* CSSグリッドレイアウトにする */
   gap: 2rem; /* グリッド同士の隙間 */
@@ -479,12 +460,6 @@ section.content-section:nth-of-type(even) {
   justify-content: center; /* グリッド全体を中央寄せ */
 }
 
-/* =========================================================
-   カード（初期状態）
-   - 透明＆下に少しズレ＆縮小した状態で開始
-   - .animate が付くとフェードイン＋上方向に表示される
-   - ホバー時の浮き上がりアニメーションのベース設定
-   ========================================================= */
 .content-card {
   background: white;
   padding: 2rem;
@@ -498,38 +473,20 @@ section.content-section:nth-of-type(even) {
   /* 下に50pxズレ＋少し縮んだ状態で始まる */
 }
 
-/* =========================================================
-   カードのアニメーション（スクロール表示用）
-   - JavaScript で .animate が付与されたときに実行
-   - フェードイン＆位置とサイズを元に戻す
-   ========================================================= */
 .content-card.animate {
   opacity: 1; /* 完全に表示 */
   transform: translateY(0) scale(1); /* 本来の位置＆サイズに戻る */
 }
 
-/* =========================================================
-   偶数番目のセクション内カード
-   - 現状は背景色が白で固定（将来のデザイン変更用）
-   ========================================================= */
 .content-section:nth-child(even) .content-card {
   background: white;
 }
 
-/* =========================================================
-   ホバー時の演出
-   - カードがふわっと浮き上がる演出
-   - 影を強くし立体感を出す
-   ========================================================= */
 .content-card:hover {
   transform: translateY(-10px) scale(1.02); /* 少し浮き上がる */
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* 影を濃くして強調 */
 }
 
-/* =========================================================
-   カード内タイトル（h3）
-   - 読みやすく適度な余白と強調スタイル
-   ========================================================= */
 .content-card h3 {
   color: var(--primary-black);
   margin-bottom: 1.5rem;
@@ -554,6 +511,7 @@ section.content-section:nth-of-type(even) {
   }
 }
 
+/* Skillsセクション モバイルレイアウト */
 @media (max-width: 480px) {
   .content-grid {
     gap: 1rem;
@@ -882,6 +840,7 @@ section.content-section:nth-of-type(even) {
     -50%
   ); /*translate(x,y):要素をx方向y方向に移動させる、中央配置*/
 }
+
 .timeline-item:nth-child(even) .timeline-marker {
   /*even:偶数番目、偶数番目のtimeline-markerを対象にする*/
   right: 0;
@@ -1028,6 +987,7 @@ section.content-section:nth-of-type(even) {
   box-shadow: 0 10px 30px rgba(45, 45, 45, 0.3);
 }
 
+/* Contactセクション　モバイルレイアウト */
 @media (max-width: 768px) {
   .contact-buttons {
     flex-direction: column;
@@ -1038,39 +998,4 @@ section.content-section:nth-of-type(even) {
     flex-direction: column;
     align-items: center;
   }
-}
-
-/* パララックス要素 */
-.parallax-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120%;
-  background: inherit;
-  will-change: transform;
-}
-
-.parallax-content {
-  position: relative;
-  z-index: 1;
-}
-
-/* アニメーションクラス */
-/* 初期状態（スタート地点） */
-.animate-on-scroll {
-  opacity: 0; /* 透明 */
-  transform: translateY(50px); /* 下に50px */
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out; /* 0.6sかけて滑らか(ease-out)に変化する */
-}
-
-/* 表示状態（ゴール地点） */
-.animate-on-scroll.is-visible {
-  opacity: 1; /* 半透明 */
-  transform: translateY(0); /* 元の位置 */
-}
-
-/* スムーズスクロール */
-html {
-  scroll-behavior: smooth;
 }
