@@ -454,7 +454,7 @@ section.content-section:nth-of-type(even) {
 /* Skillsセクション用のコンテンツグリッド */
 .content-grid {
   display: grid; /* CSSグリッドレイアウトにする */
-  gap: 2rem; /* グリッド同士の隙間 */
+  gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(300px, 450px));
   /* 1列300〜450pxの幅で、入るだけ自動で横に並べる（レスポンシブ） */
   justify-content: center; /* グリッド全体を中央寄せ */
@@ -463,11 +463,10 @@ section.content-section:nth-of-type(even) {
 .content-card {
   background: white;
   padding: 2rem;
-  border-radius: 16px; /* 角を丸くする */
-  border: 1px solid var(--very-light-gray); /* 薄い枠線 */
+  border-radius: 16px;
+  border: 1px solid var(--very-light-gray);
   transition: all 0.8s ease; /* 全体の変化を滑らかに */
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); /* 初期のやや薄い影 */
-
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   opacity: 0; /* アニメ開始前は非表示（透明） */
   transform: translateY(50px) scale(0.95);
   /* 下に50pxズレ＋少し縮んだ状態で始まる */
@@ -745,12 +744,13 @@ section.content-section:nth-of-type(even) {
   background: rgba(0, 0, 0, 0.7);
 }
 
-/* モーダルレイアウト内のカルーセルの調整 */
+/* Projectsセクション タブレットレイアウト */
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
   }
 
+/* モーダルレイアウト内のカルーセルの調整 */
   .modal-content {
     flex-direction: column;
   }
