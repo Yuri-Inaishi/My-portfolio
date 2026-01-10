@@ -195,22 +195,10 @@ body {
   opacity: 1;
 }
 
-/* オーバーレイ（背景を暗くする半透明レイヤー） */
-.hero-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(45, 45, 45, 0.4); /* 背景を暗くする半透明レイヤー */
-  z-index: 2; /* 文字より下・背景より上 */
-}
-
 /* Heroセクション固有のスタイル */
 .hero-content {
   text-align: center;
-  z-index: 3; /* 背景画像(z1) + オーバーレイ(z2) より上 */
+  z-index: 2;
   max-width: 1400px;
   width: 100%;
   margin: 0 auto;
