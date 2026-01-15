@@ -11,7 +11,8 @@
   --medium-gray: #5a5a5a;
   --light-gray: #8a8a8a;
   --very-light-gray: #e8e8e8;
-  --background-gray: #f5f5f5;
+  --background-light-gray: #fffff5;
+  --background-gray: #e8e8e8;
   --white: #ffffff;
   --accent-gray: #666666;
   --surface: rgba(45, 45, 45, 0.05);
@@ -205,7 +206,7 @@ body {
   background: linear-gradient(
     90deg, 
     transparent 0%, 
-    rgba(255, 255, 255, 0.4) 50%, 
+    rgba(255, 255, 255, 0.8) 50%, 
     transparent 100%
   );
   padding: 5px 0;
@@ -213,10 +214,17 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
   color: var(--primary-black);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: var(--primary-black);
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
 }
 
 /* Heroセクション タブレットレイアウト */
@@ -251,6 +259,7 @@ body {
   opacity: 0; /* 初期状態で非表示 */
   transition: all 1s ease; /* 1秒かけて滑らかにアニメーション */
   width: 100%;
+  background: var(--background-light-gray);
 }
 
 .content-section.animate {
@@ -258,10 +267,10 @@ body {
   opacity: 1;
 }
 
-/* section.content-section:nth-of-type(even) {
-  /*　section要素の偶数番目のcontent-sectionクラスに適用 */
-/* background: var(--background-gray);
-} */
+section.content-section:nth-of-type(odd) {
+  /*　section要素の奇数番目のcontent-sectionクラスに適用 */
+background: var(--background-gray);
+}
 
 .section-container {
   max-width: 1400px;
@@ -331,12 +340,6 @@ body {
 }
 
 /* Aboutセクション固有のスタイル */
-.content-section {
-  background-image: url("images/section-background-2.png");
-  background-size: cover; /* 画面サイズに合わせて拡大縮小 */
-  background-position: center;
-}
-
 .about-content-wrapper {
   max-width: 800px;
   margin: 0 auto;
@@ -465,7 +468,6 @@ body {
 }
 
 .content-card {
-  background: white;
   padding: 2rem;
   border-radius: 16px;
   border: 1px solid var(--very-light-gray);
@@ -479,10 +481,6 @@ body {
 .content-card.animate {
   opacity: 1; /* 完全に表示 */
   transform: translateY(0) scale(1); /* 本来の位置＆サイズに戻る */
-}
-
-.content-section:nth-child(even) .content-card {
-  background: white;
 }
 
 .content-card:hover {
@@ -525,6 +523,41 @@ body {
   }
 }
 
+/* Skillsセクション レーダーチャート */
+.radar-chart-container {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  to {
+      opacity: 1;
+  }
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+}
+
+/* Skillsセクション　　タブレットレイアウト */
+@media (max-width: 768px) {
+  .radar-chart-container {
+      padding: 32px 24px;
+  }
+}
+
+/* Skillsセクション　　モバイルレイアウト */
+@media (max-width: 425px) {
+  .radar-chart-container {
+      padding: 24px 20px;
+  }
+}
+
+
 /* Projectsセクション固有のスタイル */
 .projects-grid {
   display: grid;
@@ -535,10 +568,9 @@ body {
 }
 
 .project-card {
-  background: white;
   padding: 2rem;
   border-radius: 16px;
-  border: 1px solid var(--very-light-gray);
+  border: 1px solid var(--white);
   transition: all 0.3s ease;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
   cursor: pointer;
@@ -775,12 +807,6 @@ body {
 }
 
 /* Timelineセクション固有のスタイル */
-#timeline.content-section {
-  background-image: url("images/timeline-background.png");
-  background-size: cover; /* 画面サイズに合わせて拡大縮小 */
-  background-position: center;
-}
-
 .timeline-container {
   position: relative;
   max-width: 1000px;

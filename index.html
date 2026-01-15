@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preload" as="image" href="images/hero-background.png">
     <link rel="preload" as="image" href="images/section-background.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 </head>
 <body>
     <div class="bg-animation"></div>
@@ -44,7 +45,8 @@
     <section id="hero" class="hero-section">
         <div class="hero-content">
             <h1>PORTFOLIO</h1>
-            <p>FROM PLANT ENGINEER TO WEB DEVELOPER</p>
+            <p>FROM PLANT ENGINEER TO IT PROFESSHONAL</p>
+            <p>YURI INAISHI</p>
         </div>
     </section>
 
@@ -53,11 +55,11 @@
         <div class="section-container">
             <div class="section-header">
                 <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">プラント業界からIT業界への転身を目指しています</p>
+                <p class="section-subtitle">プラントエンジニアからIT業界への転身を目指しています</p>
             </div>
             <div class="about-content-wrapper">
-                <h3>プラント業界からIT業界への転身</h3>
-                <p>プラント業界で約4年間、設計エンジニアとして複雑な設計・最適化に携わってきました。論理的思考力と問題解決能力を磨く中で、より多くの人に影響を与えられるWebの世界に魅力を感じ、転職を決意しました。</p>
+                <h3>プラントエンジニアからIT業界への転身</h3>
+                <p>プラント業界で約5年間、設計エンジニアとして複雑な設計・最適化に携わってきました。論理的思考力と問題解決能力を磨く中で、より多くの人に影響を与えられるWebの世界に魅力を感じ、転職を決意しました。</p>
 
                 <h3>現在の学習と今後の展望</h3>
                 <p>現在はHTML、CSS、JavaScriptを中心に学習を進めており、設計で培った「全体を俯瞰する視点」と「品質への責任感」を活かして、使いやすく美しいWebサイト制作を目指しています。継続的な学習と実践を通じて技術力を向上させながら、ユーザーに価値を提供できるWeb開発者として成長していきたいと考えています。</p>
@@ -102,24 +104,24 @@
         <div class="section-container">
             <div class="section-header">
                 <h2 class="section-title">Skills</h2>
-                <p class="section-subtitle">現在のスキルと今後の学習予定</p>
+                <p class="section-subtitle">現在のWeb開発スキルと今後の学習予定</p>
             </div>
             <div class="content-grid">
 
                 <div class="content-card">
                     <h3>Web開発スキル</h3>
-                    <ul class="skill-list">
-                        <li><span class="material-icons">code</span> HTML5 / CSS3</li>
-                        <li><span class="material-icons">developer_mode</span> JavaScript (ES6+)</li>
-                        <li><span class="material-icons">devices</span> レスポンシブデザイン</li>
-                        <li><span class="material-icons">hub</span> Git / GitHub</li>
-                        <li><span class="material-icons">laptop_mac</span> VS Code</li>
-                    </ul>
+                    <div class="radar-chart-container">
+                        <div class="chart-wrapper">
+                            <canvas id="skillRadarChart"></canvas>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="content-card">
                     <h3>学習予定・興味分野</h3>
                     <ul class="skill-list">
+                        <li><span class="material-icons">terminal</span> C言語</li>
+                        <li><span class="material-icons">local_cafe</span> Java</li>
                         <li><span class="material-icons">web</span> Vue.js / React</li>
                         <li><span class="material-icons">cloud</span> Node.js</li>
                         <li><span class="material-icons">storage</span> データベース (SQL)</li>
@@ -209,12 +211,13 @@
     <div class="modal-overlay" id="project3">
         <div class="modal-content">
             <button class="modal-close">&times;</button>
-                        <div class="modal-img-container">
-                <img src="images/todo-app-1.png" alt="ToDoリストアプリのスクリーンショット 1" class="carousel-img active">
-                <img src="images/todo-app-2.png" alt="ToDoリストアプリのスクリーンショット 2" class="carousel-img">
-                <button class="modal-img-prev">&lt;</button>
-                <button class="modal-img-next">&gt;</button>
-            </div>
+                <div class="modal-img-container">
+                    <img src="images/todo-app-1.png" alt="ToDoリストアプリのスクリーンショット 1" class="carousel-img active">
+                    <img src="images/todo-app-2.png" alt="ToDoリストアプリのスクリーンショット 2" class="carousel-img">
+                    <img src="images/todo-app-3.png" alt="ToDoリストアプリのスクリーンショット 3" class="carousel-img">
+                    <button class="modal-img-prev">&lt;</button>
+                    <button class="modal-img-next">&gt;</button>
+                </div>
             <div class="modal-text">
                 <h2>ToDoリストアプリ</h2>
                 <p>学習の一環で作成したシンプルなToDoリストアプリです。タスクの追加、削除、完了状態の切り替えが可能です。</p>
@@ -223,6 +226,7 @@
                     <ul>
                         <li>ユーザー認証のためのログイン画面を実装し、セキュリティを考慮したアプリケーションの基礎を学びました。</li>
                         <li>タスクの追加・削除・完了といった基本的なCRUD操作をJavaScriptで実装しました。</li>
+                        <li>より良いユーザー体験を提供すべく、親しみやすいデザインを追求し、配色も明るいトーンで統一しました。</li>
                     </ul>
                 </div>
                 <div class="project-tech">

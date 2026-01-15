@@ -422,3 +422,116 @@ function closeModal(modal) {
   if (modal == null) return;
   modal.classList.remove("active"); // 'active'クラスを削除してCSSで非表示
 }
+
+// ========================================
+// スキルデータ設定（ここを変更してください）
+// ========================================
+const skillData = {
+  labels: ["HTML", "CSS", "VSCode", "Git/GitHub", "JavaScript", "React"],
+  values: [60, 60, 50, 30, 30, 10], // 各スキルの習熟度（%）
+};
+
+// ========================================
+// カラー設定（ここでデザインを調整できます）
+// ========================================
+const colors = {
+  primary: "rgba(100, 200, 220, 0.4)", // シアン系の塗り
+  border: "rgba(10, 100, 130, 0.6)", // シアン系の線（濃いめ）
+  grid: "rgba(1, 1, 1, 0.6)", // グリッド線（薄く）
+  angleLines: "rgba(1, 1, 1, 0.6)", // 放射線（薄く）
+  text: "#86868b", // ラベル文字色
+};
+
+// ========================================
+// Chart.js設定
+// ========================================
+const ctx = document.getElementById("skillRadarChart").getContext("2d");
+
+const skillRadarChart = new Chart(ctx, {
+  type: "radar",
+  data: {
+    labels: skillData.labels,
+    datasets: [
+      {
+        label: "習熟度",
+        data: skillData.values,
+        backgroundColor: colors.primary,
+        borderColor: colors.border,
+        borderWidth: 2.5,
+        pointBackgroundColor: colors.border,
+        pointBorderColor: "#fff",
+        pointBorderWidth: 2,
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        pointHoverBackgroundColor: colors.border,
+        pointHoverBorderColor: "#fff",
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: true,
+    animation: {
+      duration: 1200,
+      easing: "easeOutQuart",
+    },
+    scales: {
+      r: {
+        min: 0,
+        max: 100,
+        ticks: {
+          stepSize: 20,
+          font: {
+            size: 12,
+            family: "-apple-system, BlinkMacSystemFont, sans-serif",
+          },
+          color: colors.text,
+          backdropColor: "transparent",
+          callback: function (value) {
+            return value + "%";
+          },
+        },
+        grid: {
+          color: colors.grid,
+          lineWidth: 1,
+        },
+        angleLines: {
+          color: colors.angleLines,
+          lineWidth: 1,
+        },
+        pointLabels: {
+          font: {
+            size: 14,
+            family: "-apple-system, BlinkMacSystemFont, sans-serif",
+            weight: "500",
+          },
+          color: "#1d1d1f",
+          padding: 12,
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        backgroundColor: "rgba(0, 0, 0, 0.8)",
+        titleFont: {
+          size: 14,
+          family: "-apple-system, BlinkMacSystemFont, sans-serif",
+        },
+        bodyFont: {
+          size: 13,
+          family: "-apple-system, BlinkMacSystemFont, sans-serif",
+        },
+        padding: 12,
+        cornerRadius: 8,
+        callbacks: {
+          label: function (context) {
+            return "習熟度: " + context.parsed.r + "%";
+          },
+        },
+      },
+    },
+  },
+});
