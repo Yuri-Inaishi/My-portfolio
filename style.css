@@ -640,7 +640,7 @@ background: var(--background-gray);
   background: var(--primary-black);
   color: white;
   padding: 0.4rem 1rem;
-  border-radius: 20px;
+  border-radius: 8px;
   font-size: 0.85rem;
   font-weight: 500;
 }
@@ -708,6 +708,7 @@ background: var(--background-gray);
   max-width: 60%;
   height: auto;
   object-fit: cover; /* 画像の切り抜き方法 */
+  border: #2d2d2d solid 2px;
   border-radius: 8px;
 }
 
@@ -721,6 +722,7 @@ background: var(--background-gray);
   max-width: 60%;
   position: relative;
   overflow: hidden;
+  border: #2d2d2d solid 2px;
   border-radius: 8px;
 }
 

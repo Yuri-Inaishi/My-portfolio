@@ -33,9 +33,9 @@
       <img src="images/timeline-screenshot.png" alt="タイムライン" width="100%"/>
     </td>
     <td width="50%">
-      <h3>モダンなデザイン</h3>
-      <p>白と黒を基調としたミニマルなデザインで、情報を整理し、見やすさを重視しました。</p>
-      <img src="images/modern-design-screenshot.png" alt="モダンなデザイン" width="100%"/>
+      <h3>レーダーチャートによるスキルの可視化</h3>
+      <p>現在のスキルレベルをレーダーチャートを使って明記することでわかりやすく表現しました。</p>
+      <img src="images/Radarchart-screenshot.png" alt="モダンなデザイン" width="100%"/>
     </td>
   </tr>
 </table>
@@ -47,30 +47,23 @@
 |------|------|
 | **HTML5** | セマンティックなマークアップを実装 |
 | **CSS3** | Flexbox, Grid Layout, Keyframe Animationsなどを活用 |
-| **JavaScript (ES6+)** | Intersection Observer APIを使用したスクロールイベントの制御、モーダルウィンドウ、ナビゲーションの制御などを実装 |
+| **JavaScript (ES6+)** | Intersection Observer APIを使用したスクロールイベントの制御、モーダルウィンドウ、ナビゲーションの制御、レーダーチャートなどを実装 |
 | **Git / GitHub** | バージョン管理を行っています |
 
 
 ## セットアップ
-1. **Gitをインストールする**  
-   お使いのPCに[Git](https://git-scm.com/)をインストールします。
+以下をクリックすることですぐにポートフォリオを確認できます。
+[ポートフォリオの確認はこちら](https://yuri-inaishi.github.io/My-portfolio/)
 
-2. **リポジトリをクローンする**  
-   ターミナルやコマンドプロンプトを開いて、以下のコマンドを実行してください。
 
-   ```
-   git clone https://github.com/Yuri-Inaishi/My-portfolio.git
-   ```
+## 課題点
+- パフォーマンスの最適化（画像圧縮による表示速度の改善など）
+- コードの品質と保守性の向上（JavaScriptのモジュール化、CSS設計の見直し）
+- プロジェクトの高度化（外部API連携機能やコンタクトフォームの実装）
 
-3. **クローンしたディレクトリに移動する**  
-   ```
-   cd My-portfolio
-   ```
-
-4. **ポートフォリオサイトを開く**  
-   `index.html` ファイルをダブルクリックするか、任意のウェブブラウザで開いてください。
-
-> ※追加のインストールやビルド作業などは不要です。すぐにポートフォリオサイトを確認できます。
+## 今後の展望
+- コンテンツの都度更新
+- アニメーションの追加実装
 
 
 ## 製作者
