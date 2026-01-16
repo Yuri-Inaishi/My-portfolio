@@ -30,7 +30,7 @@
     <td width="50%">
       <h3>視覚的なタイムライン</h3>
       <p>自身の誕生から現在までの歩みを、写真付きのタイムラインで分かりやすく表現しました。</p>
-      <img src="images/timeline-screenshot.png" alt="タイムライン" width="100%"/>
+      <img src="images/timeline-screenshot.mp4" alt="タイムライン" width="100%"/>
     </td>
     <td width="50%">
       <h3>レーダーチャートによるスキルの可視化</h3>
