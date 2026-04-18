@@ -299,6 +299,7 @@ background: var(--background-gray);
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
+  font-family: "Playfair Display", serif;
 }
 
 .section-title::after {
@@ -311,7 +312,6 @@ background: var(--background-gray);
   height: 3px;
   background: var(--primary-black);
   border-radius: 2px;
-  font-family: "Playfair Display", serif;
 }
 
 .section-subtitle {
